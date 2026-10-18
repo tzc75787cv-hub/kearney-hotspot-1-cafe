@@ -1,1 +1,1099 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><title>kearney-hotspot-1-cafe</title></head><body><p>coming soon</p></body></html>
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>서울의 다음 핫플레이스 | 1조 스페셜티 카페</title>
+<meta name="description" content="HANJAN Coffee Seoul: 가배 한 잔, 백 년 전 서울로. 대한제국 커피 이야기를 담은 스페셜티와 다식 세트. 향후 3년 안에 뜰 서울 상권 3곳과 1순위 상권의 카페 컨셉 제안">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700;900&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/pretendard.css">
+<style>
+:root {
+  /* 오방색 + 한지 */
+  --hanji: #f3ead7;
+  --hanji-2: #f8f1e1;
+  --paper: #fffaf0;
+  --ink: #1b1a17;          /* 먹 */
+  --muted: #6a5f4d;
+  --line: #d8c9a6;
+  --indigo: #14263f;       /* 쪽빛 */
+  --indigo-2: #1d3a5f;
+  --red: #c8372d;          /* 주홍 */
+  --gold: #c9a24a;         /* 황 */
+  --jade: #8fb5a3;         /* 청자 */
+  --serif: "Noto Serif KR", "Nanum Myeongjo", "Batang", serif;
+  --loop: 18s;
+}
+* { box-sizing: border-box; margin: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: "Pretendard", system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--hanji); color: var(--ink); line-height: 1.65;
+  word-break: keep-all; overflow-wrap: break-word; -webkit-font-smoothing: antialiased;
+  background-image: radial-gradient(rgba(110,80,30,.06) 1px, transparent 1px);
+  background-size: 7px 7px;
+}
+a { color: inherit; }
+.wrap { width: min(1120px, 100% - 40px); margin-inline: auto; }
+.ph { background: rgba(201,162,74,.22); color: #7a5a14; border-radius: 4px; padding: 0 .3em; }
+.hero .ph { background: rgba(201,162,74,.2); color: #f0d48a; }
+.en { font-family: "Pretendard", sans-serif; font-style: italic; letter-spacing: .01em; }
+
+/* 오방색 띠 */
+.obang { height: 6px; background: linear-gradient(90deg, var(--red) 0 20%, #2d5aa0 20% 40%, var(--gold) 40% 60%, #efe6d2 60% 80%, #111 80% 100%); }
+
+/* ───────── NAV ───────── */
+.nav {
+  position: fixed; inset: 0 0 auto 0; z-index: 20;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 14px max(20px, calc((100% - 1120px) / 2));
+  color: #f3ead7; font-size: 14px;
+  background: linear-gradient(to bottom, rgba(14,26,44,.9), rgba(14,26,44,0));
+}
+.nav b { font-family: var(--serif); letter-spacing: .06em; font-size: 14px; }
+.nav ul { list-style: none; display: flex; gap: 22px; padding: 0; }
+.nav a { text-decoration: none; opacity: .78; }
+.nav a:hover { opacity: 1; color: var(--gold); }
+@media (max-width: 720px) { .nav ul { display: none; } }
+
+/* ───────── HERO ───────── */
+.hero {
+  position: relative; overflow: hidden; isolation: isolate;
+  min-height: 100svh; display: grid; align-items: center; color: #f3ead7;
+  background: radial-gradient(110% 90% at 78% 28%, #25476f 0%, var(--indigo) 55%, #0c1626 100%);
+}
+/* 창살(완자문 느낌) 격자 */
+.hero::before {
+  content: ""; position: absolute; inset: 0; z-index: 0; opacity: .5;
+  background:
+    linear-gradient(rgba(201,162,74,.10) 1px, transparent 1px) 0 0 / 56px 56px,
+    linear-gradient(90deg, rgba(201,162,74,.10) 1px, transparent 1px) 0 0 / 56px 56px;
+  -webkit-mask-image: radial-gradient(70% 70% at 70% 45%, #000, transparent);
+          mask-image: radial-gradient(70% 70% at 70% 45%, #000, transparent);
+}
+.hero .wrap { position: relative; z-index: 3; display: grid; grid-template-columns: 1.1fr .9fr; gap: 36px; align-items: center; padding-block: 108px 84px; }
+.eyebrow { font-size: 12px; letter-spacing: .18em; color: var(--gold); font-weight: 600; margin-bottom: 18px; }
+.headline { display: flex; gap: 18px; align-items: flex-start; }
+.hero h1 { font-family: var(--serif); text-wrap: balance; font-size: clamp(32px, 4.6vw, 62px); line-height: 1.18; letter-spacing: -.02em; font-weight: 900; }
+.hero h1 em { font-style: normal; display: block; color: #f4d58a; }
+.seal {
+  flex: none; width: clamp(54px, 6vw, 76px); aspect-ratio: 1; display: grid; place-items: center; margin-top: 6px;
+  background: var(--red); color: #fbeedc; border-radius: 6px; transform: rotate(-4deg);
+  font-family: var(--serif); font-weight: 900; font-size: clamp(18px, 2.1vw, 26px); line-height: 1.05; text-align: center;
+  box-shadow: inset 0 0 0 3px rgba(251,238,220,.35); animation: stamp var(--loop) ease-out infinite;
+}
+@keyframes stamp { 0%, 4% { transform: rotate(-4deg) scale(1.5); opacity: 0; } 8%, 92% { transform: rotate(-4deg) scale(1); opacity: 1; } 100% { transform: rotate(-4deg) scale(1); opacity: 0; } }
+.sub-en { margin-top: 6px; color: #b9c6d6; font-size: clamp(14px, 1.3vw, 17px); }
+.concept-line { text-wrap: balance; margin-top: 18px; font-family: var(--serif); font-weight: 700; font-size: clamp(18px, 1.8vw, 24px); line-height: 1.35; color: #f3ead7; }
+.concept-sub { margin-top: 4px; font-size: clamp(14px, 1.4vw, 17px); color: #e8dcc6; }
+.def-chip {
+  margin-top: 26px; display: inline-flex; gap: 12px; align-items: baseline; max-width: 34em;
+  padding: 13px 18px; border: 1px solid rgba(201,162,74,.5); border-radius: 4px;
+  background: rgba(243,234,215,.07); backdrop-filter: blur(6px);
+  box-shadow: 0 0 0 4px rgba(20,38,63,.9), 0 0 0 5px rgba(201,162,74,.3);
+}
+.def-chip small { font-size: 12px; color: var(--gold); font-weight: 700; letter-spacing: .08em; white-space: nowrap; }
+.def-chip span { font-size: clamp(14px, 1.4vw, 17px); }
+.hero-metrics { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 8px; padding: 0; }
+.hero-metrics li { list-style: none; font-size: 13px; padding: 6px 14px; border: 1px solid rgba(143,181,163,.6); color: #cfe6da; border-radius: 999px; }
+.cta { margin-top: 26px; display: inline-block; text-decoration: none; font-weight: 700; padding: 13px 24px; border-radius: 4px; background: var(--red); color: #fff4e4; box-shadow: 0 0 0 3px var(--indigo), 0 0 0 4px var(--gold); transition: transform .2s; }
+.cta:hover { transform: translateY(-2px); }
+
+/* ── 모션 스테이지: 달·산수·창호 아치 ── */
+.stage { position: relative; width: min(100%, 360px); justify-self: end; }
+.arch {
+  position: relative; aspect-ratio: 4 / 5; overflow: hidden; border-radius: 180px 180px 10px 10px;
+  background: linear-gradient(to bottom, #0f2037 0%, #23466f 62%, #3b6a8f 100%);
+  box-shadow: 0 0 0 5px var(--indigo), 0 0 0 6px var(--gold), 0 0 0 11px var(--indigo), 0 0 0 12px rgba(201,162,74,.35), 0 30px 80px rgba(0,0,0,.5);
+}
+.stars { position: absolute; inset: 0; background-image: radial-gradient(1.2px 1.2px at 20% 18%, #fff, transparent), radial-gradient(1px 1px at 72% 12%, #fff, transparent), radial-gradient(1px 1px at 84% 34%, #fff, transparent), radial-gradient(1.2px 1.2px at 12% 42%, #fff, transparent), radial-gradient(1px 1px at 60% 30%, #fff, transparent); animation: twinkle 4s ease-in-out infinite; opacity: .8; }
+@keyframes twinkle { 50% { opacity: .35; } }
+.seoul { position: absolute; left: 5%; bottom: 6%; width: 90%; z-index: 1; filter: drop-shadow(0 10px 18px rgba(0,0,0,.35)); }
+.map-lbl { font: 700 11px "Pretendard", sans-serif; }
+.river-flow { animation: riverflow 3s linear infinite; }
+@keyframes riverflow { to { stroke-dashoffset: -28; } }
+.map-note { position: absolute; left: 0; right: 0; bottom: 8px; z-index: 4; text-align: center; font-size: 10px; letter-spacing: .04em; color: rgba(243,234,215,.55); margin: 0; }
+.moon {
+  position: absolute; left: 50%; top: 5%; width: 24%; aspect-ratio: 1; translate: -50% 0; border-radius: 50%;
+  background: radial-gradient(circle at 38% 35%, #fff7de 0 40%, #f1dba4 72%, #e2c47a 100%);
+  box-shadow: 0 0 40px 10px rgba(246,226,160,.35), 0 0 120px 40px rgba(246,226,160,.15);
+  animation: moon var(--loop) ease-in-out infinite;
+}
+@keyframes moon {
+  0%, 100% { transform: translateY(18px) scale(.96); box-shadow: 0 0 30px 6px rgba(246,226,160,.25), 0 0 90px 24px rgba(246,226,160,.1); }
+  58% { transform: translateY(-6px) scale(1.04); box-shadow: 0 0 60px 18px rgba(246,226,160,.5), 0 0 160px 60px rgba(246,226,160,.22); }
+}
+.mist { position: absolute; left: -20%; right: -20%; height: 14%; border-radius: 50%; background: radial-gradient(closest-side, rgba(243,234,215,.3), transparent); filter: blur(8px); animation: mist 14s ease-in-out infinite alternate; }
+
+.mist.m2 { top: 66%; animation-duration: 18s; animation-direction: alternate-reverse; opacity: .8; }
+@keyframes mist { from { transform: translateX(-8%); } to { transform: translateX(8%); } }
+.ridge { position: absolute; left: -6%; width: 112%; bottom: 0; }
+.ridge.r1 { height: 62%; animation: sway 18s ease-in-out infinite; }
+.ridge.r2 { height: 48%; animation: sway 18s ease-in-out infinite reverse; }
+.ridge.r3 { height: 34%; animation: sway 18s ease-in-out infinite; animation-duration: 12s; }
+@keyframes sway { 0%, 100% { transform: translateX(-1.5%); } 50% { transform: translateX(1.5%); } }
+
+/* 찻잔 + 김 */
+.cup { position: absolute; left: 50%; bottom: 3%; translate: -50% 0; width: 22%; z-index: 4; }
+.steam path { fill: none; stroke: #f3ead7; stroke-width: 3; stroke-linecap: round; stroke-dasharray: 40; stroke-dashoffset: 40; opacity: 0; animation: steam 4.5s ease-out infinite; }
+.steam path:nth-child(2) { animation-delay: 1.5s; }
+.steam path:nth-child(3) { animation-delay: 3s; }
+@keyframes steam { 0% { stroke-dashoffset: 40; opacity: 0; transform: translateY(8px); } 30% { opacity: .85; } 100% { stroke-dashoffset: 0; opacity: 0; transform: translateY(-10px); } }
+
+/* 상권 핀 + 물결 */
+.pin { position: absolute; z-index: 3; transform: translate(-50%, -50%); }
+.pin b { display: block; width: 12px; height: 12px; border-radius: 50%; background: var(--jade); box-shadow: 0 0 0 4px rgba(143,181,163,.28); }
+.pin span { position: absolute; left: 50%; top: 16px; translate: -50% 0; white-space: nowrap; font-size: 11px; font-weight: 700; padding: 2px 9px; border-radius: 3px; background: var(--paper); color: var(--ink); }
+.pin.top b { width: 18px; height: 18px; background: var(--red); box-shadow: 0 0 0 4px rgba(200,55,45,.35); animation: pop var(--loop) ease-in-out infinite; }
+.pin.top span { background: var(--red); color: #fff4e4; font-size: 12px; top: 22px; }
+@keyframes pop { 0%, 50%, 70%, 100% { transform: scale(1); } 58% { transform: scale(1.6); } }
+.ripple { position: absolute; z-index: 2; width: 24px; height: 24px; margin: -12px 0 0 -12px; border-radius: 50%; border: 1.5px solid #f4d58a; opacity: 0; animation: ripple var(--loop) ease-out infinite; }
+.ripple:nth-of-type(2) { animation-delay: .7s; }
+.ripple:nth-of-type(3) { animation-delay: 1.4s; }
+@keyframes ripple { 0%, 49% { transform: scale(.3); opacity: 0; } 50% { transform: scale(.3); opacity: .95; } 74%, 100% { transform: scale(9); opacity: 0; } }
+
+/* 장면 캡션 (한지 카드) */
+.scenes { position: relative; height: 118px; margin-top: 26px; }
+.scene {
+  position: absolute; inset: 0 0 auto 0; padding: 12px 16px; border-radius: 4px;
+  background: var(--hanji-2); color: var(--ink); border-left: 5px solid var(--red);
+  opacity: 0; transform: translateY(12px); animation: scene var(--loop) ease-in-out infinite;
+}
+.scene:nth-child(1) { animation-delay: 0s; }
+.scene:nth-child(2) { animation-delay: calc(var(--loop) / 4); }
+.scene:nth-child(3) { animation-delay: calc(var(--loop) / 2); }
+.scene:nth-child(4) { animation-delay: calc(var(--loop) * .75); }
+@keyframes scene { 0% { opacity: 0; transform: translateY(12px); } 3%, 21% { opacity: 1; transform: none; } 25%, 100% { opacity: 0; transform: translateY(-10px); } }
+.scene small { color: var(--red); font-weight: 800; font-size: 11px; letter-spacing: .14em; }
+.scene p { font-family: var(--serif); font-size: clamp(14px, 1.5vw, 17px); font-weight: 700; margin-top: 1px; line-height: 1.4; }
+.bars { display: grid; gap: 5px; margin-top: 6px; }
+.bars div { display: grid; grid-template-columns: 6em 1fr; gap: 8px; align-items: center; font-size: 12px; }
+.bars em { font-style: normal; }
+.bars span { height: 6px; background: #e3d6b8; border-radius: 3px; overflow: hidden; }
+.bars span::after { content: ""; display: block; height: 100%; background: linear-gradient(90deg, var(--gold), var(--red)); transform-origin: left; transform: scaleX(0); animation: grow var(--loop) ease-out infinite; animation-delay: calc(var(--loop) / 4); }
+.bars div:nth-child(1) span::after { --w: .86; }
+.bars div:nth-child(2) span::after { --w: .64; }
+.bars div:nth-child(3) span::after { --w: .78; }
+@keyframes grow { 0% { transform: scaleX(0); } 8%, 21% { transform: scaleX(var(--w, .7)); } 25%, 100% { transform: scaleX(0); } }
+
+.loopbar { position: absolute; left: 0; bottom: 0; height: 3px; width: 100%; z-index: 5; background: rgba(243,234,215,.12); }
+.loopbar::after { content: ""; position: absolute; inset: 0; background: var(--gold); transform-origin: left; animation: loopfill var(--loop) linear infinite; }
+@keyframes loopfill { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+.scroll-hint { position: absolute; bottom: 16px; left: 50%; translate: -50% 0; z-index: 5; font-size: 11px; letter-spacing: .2em; color: rgba(243,234,215,.55); }
+
+@media (max-width: 900px) {
+  .hero .wrap { grid-template-columns: 1fr; padding-block: 92px 76px; }
+  .stage { justify-self: center; width: min(86%, 340px); margin-top: 8px; }
+  .scenes { height: 128px; }
+}
+
+/* ───────── 공통 섹션 ───────── */
+section.block { padding: clamp(56px, 8vw, 100px) 0; }
+section.block:nth-of-type(even) { background: rgba(255,250,240,.55); }
+.label { font-size: 12px; font-weight: 700; letter-spacing: .18em; color: var(--red); display: flex; align-items: center; gap: 10px; }
+.label::before { content: ""; width: 22px; height: 2px; background: var(--red); }
+h2 { font-family: var(--serif); font-size: clamp(25px, 3.2vw, 38px); letter-spacing: -.02em; line-height: 1.3; margin-top: 10px; font-weight: 900; }
+.lead { margin-top: 12px; color: var(--muted); max-width: 40em; }
+.grid { display: grid; gap: 18px; margin-top: 32px; }
+.g3 { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 860px) { .g3 { grid-template-columns: 1fr; } }
+.card {
+  background: var(--paper); border: 1px solid var(--line); border-radius: 4px; padding: 24px; position: relative;
+  box-shadow: 0 0 0 4px var(--hanji), 0 0 0 5px rgba(216,201,166,.9);
+  margin: 5px;
+}
+.card h3 { font-family: var(--serif); font-size: 19px; margin: 6px 0 8px; font-weight: 700; }
+.card p, .card li { color: var(--muted); font-size: 15px; }
+.num { font-size: 12px; font-weight: 800; color: var(--red); letter-spacing: .12em; }
+.big { font-family: var(--serif); font-size: 34px; font-weight: 900; letter-spacing: -.02em; color: var(--ink); }
+
+/* 백테스트 */
+.timeline { margin-top: 32px; position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.timeline::before { content: ""; position: absolute; left: 6%; right: 6%; top: 18px; height: 2px; background: var(--line); }
+.tl { position: relative; text-align: center; padding-top: 44px; }
+.tl::before { content: ""; position: absolute; left: 50%; top: 10px; width: 18px; height: 18px; translate: -50% 0; border-radius: 50%; background: var(--paper); border: 3px solid var(--gold); }
+.tl.hit::before { background: var(--red); border-color: var(--red); }
+.tl b { display: block; font-size: 15px; }
+.tl span { font-size: 14px; color: var(--muted); }
+.table-scroll { overflow-x: auto; margin-top: 28px; }
+table { width: 100%; border-collapse: collapse; background: var(--paper); border: 1px solid var(--line); }
+th, td { padding: 14px 16px; text-align: left; font-size: 15px; border-bottom: 1px solid var(--line); }
+th { background: #efe3c8; font-size: 12px; letter-spacing: .06em; }
+tr:last-child td { border-bottom: 0; }
+.verdict { margin-top: 20px; display: inline-flex; gap: 10px; align-items: center; padding: 12px 18px; border-radius: 4px; background: var(--indigo); color: #f3ead7; font-weight: 700; }
+.verdict i { font-style: normal; color: #ff7a6b; }
+
+/* 상권 */
+.card.first { background: var(--indigo); color: #f3ead7; border-color: var(--gold); box-shadow: 0 0 0 4px var(--hanji), 0 0 0 5px var(--gold); }
+.card.first p, .card.first li { color: #d6ddea; }
+.card.first .num { color: #f4d58a; }
+.card.first .ph { background: rgba(201,162,74,.22); color: #f0d48a; }
+.badge { position: absolute; top: 16px; right: 16px; font-size: 12px; font-weight: 800; padding: 3px 10px; border-radius: 3px; background: var(--red); color: #fff4e4; }
+.card ul { padding-left: 18px; margin-top: 10px; }
+
+/* 컨셉 체인 */
+.chain { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 32px; border: 1px solid var(--line); background: var(--paper); }
+.chain .step { padding: 22px; position: relative; }
+.chain .step + .step { border-left: 1px solid var(--line); }
+.chain .step + .step::before { content: "→"; position: absolute; left: -12px; top: 20px; width: 24px; height: 24px; display: grid; place-items: center; border-radius: 50%; background: var(--red); color: #fff4e4; font-size: 12px; z-index: 1; }
+.chain h3 { font-family: var(--serif); font-size: 18px; margin: 4px 0 6px; }
+.chain p { font-size: 14px; color: var(--muted); }
+.chain .why { margin-top: 10px; font-size: 12px; color: var(--red); font-weight: 700; }
+@media (max-width: 860px) {
+  .chain { grid-template-columns: 1fr; }
+  .chain .step + .step { border-left: 0; border-top: 1px solid var(--line); }
+  .chain .step + .step::before { content: "↓"; left: 22px; top: -12px; }
+}
+
+.sub-h { font-family: var(--serif); font-size: 20px; margin: 48px 0 14px; font-weight: 700; }
+.sub-h small { font-family: "Pretendard", sans-serif; font-size: 13px; color: var(--muted); font-weight: 400; }
+.menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 18px; }
+.ko-name { font-size: 13px; color: var(--muted); margin-top: -4px; }
+.spec { margin: 14px 0 0; display: grid; gap: 0; }
+.spec > div { display: grid; grid-template-columns: 3.4em 1fr; gap: 8px; padding: 9px 0; border-top: 1px dashed var(--line); font-size: 14px; }
+.spec dt { font-size: 12px; font-weight: 800; color: var(--red); letter-spacing: .04em; padding-top: 1px; }
+.spec dd { margin: 0; color: var(--muted); }
+.spec .price dd { color: var(--ink); font-weight: 700; }
+.menu-card { display: flex; flex-direction: column; }
+.taste { margin-top: 8px; font-size: 13px; color: var(--ink); letter-spacing: .02em; }
+.why-s { margin-top: 6px; font-size: 12px; color: var(--red); font-weight: 600; }
+.note { margin-top: 12px; font-size: 13px; color: var(--muted); }
+.flow { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(6, 1fr); gap: 0; counter-reset: f; border: 1px solid var(--line); background: var(--paper); }
+.flow li { counter-increment: f; padding: 14px 12px; font-size: 14px; text-align: center; border-left: 1px solid var(--line); }
+.flow li:first-child { border-left: 0; }
+.flow li::before { content: counter(f); display: block; color: var(--red); font-weight: 800; font-size: 12px; }
+.flow small { color: var(--muted); font-size: 11px; }
+@media (max-width: 860px) { .flow { grid-template-columns: repeat(2, 1fr); } .flow li:nth-child(odd) { border-left: 0; } .flow li:nth-child(n+3) { border-top: 1px solid var(--line); } }
+table + .note, .table-scroll + .note { margin-bottom: 18px; }
+
+.story { display: grid; grid-template-columns: 1.1fr .9fr; gap: 18px; margin-top: 28px; align-items: stretch; }
+@media (max-width: 860px) { .story { grid-template-columns: 1fr; } }
+.story-card { background: var(--indigo); color: #f3ead7; padding: 24px; border-radius: 4px; box-shadow: 0 0 0 4px var(--hanji), 0 0 0 5px var(--gold); margin: 5px; }
+.story-card .num { color: #f4d58a; }
+.story-ko { font-family: var(--serif); font-size: clamp(17px, 1.9vw, 21px); font-weight: 700; line-height: 1.55; margin-top: 8px; }
+.story-en { margin-top: 8px; font-size: 14px; color: #c9d4e3; }
+.story-note { margin-top: 12px; font-size: 12px; color: #aab8cc; }
+.both { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.both > div { background: var(--paper); border: 1px solid var(--line); border-radius: 4px; padding: 18px 20px; }
+.both p:not(.num) { font-size: 14px; color: var(--muted); margin-top: 4px; }
+.story .both { grid-template-columns: 1fr; }
+@media (max-width: 560px) { .both { grid-template-columns: 1fr; } }
+
+.exp-map { margin: 0; padding: 14px; background: var(--paper); border: 1px solid var(--line); border-radius: 4px; box-shadow: 0 0 0 4px var(--hanji), 0 0 0 5px rgba(216,201,166,.9); }
+.exp-map svg { width: 100%; height: auto; display: block; }
+.m-floor { fill: #fbf4e4; stroke: var(--ink); stroke-width: 2; }
+.m-gap { stroke: var(--paper); stroke-width: 6; }
+.m-door { font: 700 13px "Pretendard", sans-serif; fill: var(--muted); }
+.m-zone { fill: #f3ead7; stroke: var(--line); stroke-width: 1.5; }
+.m-photo { fill: #efe0bd; }
+.m-lamp { fill: #f4d58a; stroke: var(--gold); stroke-width: 2; }
+.m-zt { font: 700 14px var(--serif); fill: var(--ink); }
+.m-zs { font: 400 12px "Pretendard", sans-serif; fill: var(--muted); }
+.m-seat circle { fill: #d8c9a6; }
+.m-seat circle[r="16"] { fill: #e8d9b8; stroke: var(--line); stroke-width: 1.5; }
+.m-serve { fill: none; stroke: #5e8f7c; stroke-width: 3; stroke-dasharray: 3 6; stroke-linecap: round; }
+.m-serve-t { fill: #5e8f7c; }
+.m-route-bg { fill: none; stroke: rgba(200,55,45,.16); stroke-width: 12; stroke-linejoin: round; stroke-linecap: round; }
+.m-route { fill: none; stroke: var(--red); stroke-width: 3.5; stroke-dasharray: 10 8; stroke-linejoin: round; animation: routeflow 1.2s linear infinite; }
+@keyframes routeflow { to { stroke-dashoffset: -18; } }
+.m-dot { fill: var(--gold); stroke: #fff; stroke-width: 2; offset-path: path("M80 480 V360 H640 V230 H760 V430 H140 V480"); offset-distance: 0%; animation: travel 14s linear infinite; }
+@keyframes travel { from { offset-distance: 0%; } to { offset-distance: 100%; } }
+.m-stop circle { fill: var(--red); stroke: #fff; stroke-width: 3; transform-box: fill-box; transform-origin: center; animation: stopPulse 14s ease-out infinite; animation-delay: var(--d); }
+@keyframes stopPulse { 0% { transform: scale(1.6); } 9%, 100% { transform: scale(1); } }
+.m-stop text { fill: #fff; font: 800 14px "Pretendard", sans-serif; }
+.m-label { font: 700 14px var(--serif); fill: var(--ink); paint-order: stroke; stroke: #fbf4e4; stroke-width: 4px; }
+.m-sub { font: 400 12px "Pretendard", sans-serif; fill: var(--muted); paint-order: stroke; stroke: #fbf4e4; stroke-width: 3px; }
+.exp-map figcaption { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; padding: 10px 4px 0; font-size: 13px; color: var(--muted); }
+.lg { display: inline-flex; align-items: center; gap: 6px; }
+.lg-route, .lg-serve { display: inline-block; width: 28px; height: 0; border-top: 3px dashed var(--red); }
+.lg-serve { border-top-color: #5e8f7c; border-top-style: dotted; }
+@media (max-width: 700px) { .exp-map { display: none; } }
+@media (min-width: 701px) { .flow { display: none; } }
+@media (prefers-reduced-motion: reduce) { .m-route, .m-stop circle { animation: none; } .m-dot { display: none; } }
+.g2 { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 860px) { .g2 { grid-template-columns: 1fr; } }
+.callout { margin-top: 18px; padding: 18px 22px; border-left: 6px solid var(--red); background: var(--paper); border-radius: 4px; box-shadow: 0 0 0 4px var(--hanji), 0 0 0 5px rgba(216,201,166,.9); font-size: 15px; }
+.card ul small, .card p small { color: var(--muted); }
+.card.first ul small { color: #b9c6d6; }
+.film { position: relative; z-index: 3; padding-bottom: 72px; }
+.film-label { font-size: 12px; letter-spacing: .18em; color: var(--gold); font-weight: 700; margin-bottom: 12px; text-align: center; }
+.film-box { width: min(100%, 960px); margin: 0 auto; aspect-ratio: 16 / 9; border-radius: 6px; overflow: hidden; box-shadow: 0 0 0 4px var(--indigo), 0 0 0 5px var(--gold), 0 24px 60px rgba(0,0,0,.5); background: #07101c; }
+.film-box iframe { width: 100%; height: 100%; border: 0; display: block; }
+.hero-film { justify-self: end; width: 100%; }
+.hero-film .film-box { width: 100%; aspect-ratio: 16 / 9; border-radius: 6px; overflow: hidden; box-shadow: 0 0 0 4px var(--indigo), 0 0 0 5px var(--gold), 0 24px 60px rgba(0,0,0,.5); background: #07101c; }
+.hero-film iframe { width: 100%; height: 100%; border: 0; display: block; }
+.hero-film .film-label { margin-top: 14px; text-align: center; font-size: 12px; letter-spacing: .12em; color: var(--gold); font-weight: 700; }
+.map-wrap { display: flex; justify-content: center; margin-top: 12px; }
+.map-wrap .stage { justify-self: center; margin: 0 auto; }
+.hero-metrics b { color: #f4d58a; font-size: 1.25em; margin-right: 4px; }
+.concept-brand { font-family: "Pretendard", sans-serif; font-size: .6em; letter-spacing: .08em; color: var(--gold); margin-left: 8px; font-weight: 700; }
+.beans { position: absolute; inset: 0; z-index: 1; overflow: hidden; pointer-events: none; }
+.bean { position: absolute; transform: rotate(var(--r)); filter: drop-shadow(0 6px 10px rgba(0,0,0,.35)); animation: beanfloat 16s ease-in-out infinite; }
+@keyframes beanfloat { 0%, 100% { transform: translateY(0) rotate(var(--r)); } 50% { transform: translateY(-16px) rotate(calc(var(--r) + 14deg)); } }
+.menu-ico { position: absolute; top: 18px; right: 18px; width: 46px; height: 46px; opacity: .95; }
+.menu-card h3 { padding-right: 56px; }
+@media (prefers-reduced-motion: reduce) { .bean { animation: none; } }
+.tabbar { display: flex; gap: 8px; margin-top: 30px; padding-bottom: 12px; border-bottom: 2px solid var(--line); overflow-x: auto; scrollbar-width: thin; }
+.tabbar button { flex: none; font: 700 15px "Pretendard", sans-serif; padding: 10px 18px; border: 1px solid var(--line); border-radius: 999px; background: var(--paper); color: var(--muted); cursor: pointer; transition: all .15s; }
+.tabbar button:hover { border-color: var(--red); color: var(--ink); }
+.tabbar button[aria-selected="true"] { background: var(--red); border-color: var(--red); color: #fff4e4; }
+.tabpanel { padding-top: 6px; }
+.tabpanel[hidden] { display: none; }
+.tabpanel > .sub-h:first-child { margin-top: 18px; }
+.concept-summary { margin-top: 26px; font-family: var(--serif); font-size: clamp(18px, 2.2vw, 24px); font-weight: 700; line-height: 1.5; }
+
+.risk { border-left: 6px solid var(--red); }
+.sources li { overflow-wrap: anywhere; word-break: break-all; }
+.sources { margin-top: 24px; padding-left: 20px; color: var(--muted); font-size: 14px; display: grid; gap: 6px; }
+footer { padding: 36px 0 48px; text-align: center; color: var(--muted); font-size: 13px; font-family: var(--serif); }
+
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.in { opacity: 1; transform: none; }
+.no-js .reveal { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .reveal { opacity: 1; transform: none; }
+  .scenes { height: auto; display: grid; gap: 8px; }
+  .scene { position: static; opacity: 1; transform: none; }
+  .bars span::after { transform: scaleX(var(--w, .7)); }
+  .ripple { display: none; }
+  .steam path { opacity: .7; stroke-dashoffset: 0; }
+}
+</style>
+</head>
+<body class="no-js">
+
+<nav class="nav" aria-label="섹션 이동">
+  <b>KEARNEY HOTSPOT · 1조</b>
+  <ul>
+    <li><a href="#definition">정의</a></li>
+    <li><a href="#districts">결론</a></li>
+    <li><a href="#evidence">근거</a></li>
+    <li><a href="#concept">컨셉</a></li>
+    <li><a href="#risk">리스크</a></li>
+    <li><a href="#sources">출처</a></li>
+  </ul>
+</nav>
+
+<!-- ═════ 1. 히어로: 루프 모션 배너 ═════ -->
+<header class="hero" id="top">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+    <linearGradient id="beanG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8a5a35"/><stop offset="1" stop-color="#3f2616"/></linearGradient>
+    <symbol id="bean" viewBox="0 0 40 56"><ellipse cx="20" cy="28" rx="17" ry="25" fill="url(#beanG)"/><ellipse cx="14" cy="18" rx="5" ry="9" fill="#fff" opacity=".12" transform="rotate(-20 14 18)"/><path d="M20 4 C9 19 31 37 20 52" fill="none" stroke="#1d110a" stroke-width="3" stroke-linecap="round"/></symbol>
+  </defs></svg>
+  <div class="beans" aria-hidden="true"><svg class="bean" style="left:52%;top:8%;width:54px;height:76px;--r:25deg;opacity:0.55;animation-delay:-0s" viewBox="0 0 40 56"><use href="#bean"/></svg><svg class="bean" style="left:60%;top:78%;width:70px;height:98px;--r:-35deg;opacity:0.5;animation-delay:-2s" viewBox="0 0 40 56"><use href="#bean"/></svg><svg class="bean" style="left:92%;top:20%;width:62px;height:87px;--r:50deg;opacity:0.55;animation-delay:-4s" viewBox="0 0 40 56"><use href="#bean"/></svg><svg class="bean" style="left:88%;top:82%;width:48px;height:67px;--r:15deg;opacity:0.5;animation-delay:-1s" viewBox="0 0 40 56"><use href="#bean"/></svg><svg class="bean" style="left:4%;top:14%;width:40px;height:56px;--r:-20deg;opacity:0.4;animation-delay:-3s" viewBox="0 0 40 56"><use href="#bean"/></svg><svg class="bean" style="left:3%;top:70%;width:58px;height:81px;--r:40deg;opacity:0.45;animation-delay:-5s" viewBox="0 0 40 56"><use href="#bean"/></svg><svg class="bean" style="left:46%;top:90%;width:38px;height:53px;--r:-50deg;opacity:0.4;animation-delay:-6s" viewBox="0 0 40 56"><use href="#bean"/></svg><svg class="bean" style="left:70%;top:4%;width:36px;height:50px;--r:70deg;opacity:0.45;animation-delay:-7s" viewBox="0 0 40 56"><use href="#bean"/></svg><svg class="bean" style="left:97%;top:52%;width:44px;height:62px;--r:-15deg;opacity:0.5;animation-delay:-8s" viewBox="0 0 40 56"><use href="#bean"/></svg><svg class="bean" style="left:33%;top:4%;width:30px;height:42px;--r:10deg;opacity:0.35;animation-delay:-9s" viewBox="0 0 40 56"><use href="#bean"/></svg><svg class="bean" style="left:24%;top:94%;width:46px;height:64px;--r:-30deg;opacity:0.4;animation-delay:-10s" viewBox="0 0 40 56"><use href="#bean"/></svg><svg class="bean" style="left:78%;top:92%;width:34px;height:48px;--r:60deg;opacity:0.45;animation-delay:-11s" viewBox="0 0 40 56"><use href="#bean"/></svg><svg class="bean" style="left:15%;top:40%;width:28px;height:39px;--r:35deg;opacity:0.3;animation-delay:-12s" viewBox="0 0 40 56"><use href="#bean"/></svg><svg class="bean" style="left:56%;top:48%;width:26px;height:36px;--r:-60deg;opacity:0.25;animation-delay:-13s" viewBox="0 0 40 56"><use href="#bean"/></svg></div>
+  <div class="wrap">
+    <div class="hero-copy">
+      <p class="eyebrow">HANJAN Coffee Seoul <span style="opacity:.7;letter-spacing:.06em">(Han-jan)</span></p>
+      <div class="headline">
+        <h1>서울의 다음 핫플레이스는<em><span data-slot="top1">[1순위 상권]</span></em></h1>
+        
+      </div>
+      <ul class="hero-metrics" aria-label="근거 수치">
+        <li><b>16.1%</b> 단기 체류 외국인</li>
+        <li><b>약 6.5배</b> 외국인 카드 지출</li>
+        <li><b>9곳</b> 개인 카페 · 프랜차이즈 0%</li>
+      </ul>
+      <p class="concept-line"><span data-slot="conceptLine">가배 한 잔, 백 년 전 서울로.</span> <span class="concept-brand">HANJAN Coffee Seoul</span></p>
+      <p class="sub-en en">Korea’s early coffee story in one cup: specialty coffee with court-inspired Korean sweets.</p>
+      <div class="def-chip">
+        <small>“뜬다”란</small>
+        <span data-slot="definition">[뜬다의 정의 한 줄]</span>
+      </div>
+      <a class="cta" href="#evidence">근거 보기</a>
+    </div>
+
+    <div class="hero-film">
+      <div class="film-box"><iframe title="퇴계로 5가 · HANJAN Coffee Seoul 모션 그래픽" allow="autoplay; fullscreen" allowfullscreen srcdoc="&lt;!doctype html&gt;
+&lt;html lang=&quot;ko&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;title&gt;퇴계로 5가 · HANJAN Coffee Seoul 모션 그래픽&lt;/title&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700;900&amp;display=swap&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/pretendard.css&quot;&gt;
+&lt;style&gt;
+:root { --indigo:#14263f; --gold:#c9a24a; --red:#c8372d; --hanji:#f3ead7; --serif:&quot;Noto Serif KR&quot;,&quot;Nanum Myeongjo&quot;,serif; }
+* { box-sizing: border-box; margin: 0; }
+html, body { height: 100%; background: #07101c; color: var(--hanji); font-family: &quot;Pretendard&quot;, system-ui, sans-serif; overflow: hidden; }
+#wrap { position: fixed; inset: 0 0 56px 0; overflow: hidden; }
+#stage { position: absolute; left: 50%; top: 50%; width: 1920px; height: 1080px; transform-origin: center; overflow: hidden;
+  background: radial-gradient(110% 90% at 70% 25%, #25476f 0%, var(--indigo) 55%, #0a1422 100%); }
+.abs { position: absolute; }
+.scene { position: absolute; inset: 0; opacity: 0; }
+#stars { inset: 0; background-image: radial-gradient(2px 2px at 12% 14%, #fff, transparent), radial-gradient(2px 2px at 30% 28%, #fff, transparent), radial-gradient(1.5px 1.5px at 52% 10%, #fff, transparent), radial-gradient(2px 2px at 70% 22%, #fff, transparent), radial-gradient(1.5px 1.5px at 88% 12%, #fff, transparent), radial-gradient(2px 2px at 92% 40%, #fff, transparent), radial-gradient(1.5px 1.5px at 6% 44%, #fff, transparent); opacity: .8; }
+#moon { left: 0; top: 0; width: 280px; height: 280px; border-radius: 50%;
+  background: radial-gradient(circle at 38% 35%, #fff7de 0 40%, #f1dba4 72%, #e2c47a 100%);
+  box-shadow: 0 0 80px 24px rgba(246,226,160,.35), 0 0 260px 90px rgba(246,226,160,.14); }
+#ridges { left: 0; bottom: 0; width: 1920px; height: 520px; }
+.kicker { font-size: 30px; letter-spacing: .3em; color: var(--gold); font-weight: 700; }
+.h1 { font-family: var(--serif); font-weight: 900; line-height: 1.15; letter-spacing: -.02em; }
+.gold { color: #f4d58a; }
+.en { font-style: italic; color: #c9d4e3; }
+#seal { width: 120px; height: 120px; background: var(--red); color: #fbeedc; border-radius: 10px; display: grid; place-items: center; font: 900 42px/1.05 var(--serif); text-align: center; box-shadow: inset 0 0 0 5px rgba(251,238,220,.35); }
+.card { width: 520px; padding: 36px 36px 40px; border: 2px solid rgba(201,162,74,.6); border-radius: 8px; background: rgba(243,234,215,.08); backdrop-filter: blur(6px); box-shadow: 0 0 0 8px rgba(20,38,63,.9), 0 0 0 10px rgba(201,162,74,.3); }
+.card .n { color: var(--gold); font-weight: 800; letter-spacing: .2em; font-size: 24px; }
+.card .t { font-family: var(--serif); font-weight: 900; font-size: 54px; margin-top: 10px; line-height: 1.2; }
+.card .d { margin-top: 14px; font-size: 30px; color: #d6ddea; line-height: 1.45; }
+#mapsvg { left: 210px; top: 230px; width: 1500px; height: 867px; }
+#cap { left: 0; right: 0; top: 70px; text-align: center; }
+#capn { display: inline-grid; place-items: center; width: 74px; height: 74px; border-radius: 50%; background: var(--red); color: #fff; font: 800 40px Pretendard; vertical-align: middle; margin-right: 22px; }
+#capt { font-family: var(--serif); font-weight: 900; font-size: 64px; vertical-align: middle; }
+#caps { font-size: 34px; color: #c9d4e3; margin-top: 14px; }
+.m-floor { fill: rgba(251,244,228,.08); stroke: rgba(243,234,215,.7); stroke-width: 2; }
+.m-zone { fill: rgba(243,234,215,.14); stroke: rgba(243,234,215,.35); stroke-width: 1.5; }
+.m-zt { font: 700 14px &quot;Noto Serif KR&quot;, serif; fill: #f3ead7; }
+.m-zs { font: 400 12px Pretendard; fill: #b9c6d6; }
+.m-route { fill: none; stroke: var(--red); stroke-width: 4; stroke-linejoin: round; stroke-linecap: round; }
+.m-routebg { fill: none; stroke: rgba(200,55,45,.2); stroke-width: 12; }
+.m-serve { fill: none; stroke: #8fb5a3; stroke-width: 3; stroke-dasharray: 3 6; stroke-linecap: round; }
+.m-seat circle { fill: rgba(243,234,215,.22); }
+.stop circle { fill: #4a3a3a; stroke: #fff; stroke-width: 3; }
+.stop text { fill: #fff; font: 800 14px Pretendard; }
+.m-dot { fill: #f4d58a; stroke: #fff; stroke-width: 2; }
+#cup { left: 0; top: 0; width: 220px; }
+#progress { position: absolute; left: 0; bottom: 0; height: 6px; background: var(--gold); width: 0; }
+#ui { position: fixed; left: 0; right: 0; bottom: 0; height: 56px; display: flex; gap: 14px; align-items: center; padding: 0 18px; background: #0c1828; }
+#ui button { background: var(--red); color: #fff; border: 0; border-radius: 4px; padding: 8px 16px; font: 700 14px Pretendard; cursor: pointer; }
+#seek { flex: 1; accent-color: #c9a24a; }
+#tm { font: 13px Pretendard; color: #9fb0c5; min-width: 90px; text-align: right; }
+@media (prefers-reduced-motion: reduce) { #ui::after { content: &quot;모션 줄이기 설정이 켜져 있어도 이 영상은 재생 버튼으로 볼 수 있습니다&quot;; color: #9fb0c5; font-size: 12px; } }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;wrap&quot;&gt;&lt;div id=&quot;stage&quot;&gt;
+  &lt;div id=&quot;stars&quot; class=&quot;abs&quot;&gt;&lt;/div&gt;
+  &lt;div id=&quot;moon&quot; class=&quot;abs&quot;&gt;&lt;/div&gt;
+  &lt;svg id=&quot;ridges&quot; class=&quot;abs&quot; viewBox=&quot;0 0 1920 520&quot; preserveAspectRatio=&quot;none&quot;&gt;
+    &lt;path d=&quot;M0 230 Q220 90 440 190 T860 150 T1280 200 T1620 120 T1920 170 L1920 520 L0 520Z&quot; fill=&quot;#2c557f&quot; opacity=&quot;.7&quot;/&gt;
+    &lt;path d=&quot;M0 330 Q260 200 520 300 T980 270 T1500 310 T1920 270 L1920 520 L0 520Z&quot; fill=&quot;#1e3d63&quot;/&gt;
+    &lt;path d=&quot;M0 430 Q300 340 620 410 T1200 390 T1920 420 L1920 520 L0 520Z&quot; fill=&quot;#101f35&quot;/&gt;
+  &lt;/svg&gt;
+
+  &lt;!-- S1 --&gt;
+  &lt;div class=&quot;scene&quot; id=&quot;s1&quot;&gt;
+    &lt;div class=&quot;abs kicker&quot; style=&quot;left:0;right:0;top:300px;text-align:center&quot; id=&quot;s1k&quot;&gt;SEOUL NEXT HOTSPOT&lt;/div&gt;
+    &lt;div class=&quot;abs h1&quot; style=&quot;left:0;right:0;top:360px;text-align:center;font-size:132px&quot; id=&quot;s1a&quot;&gt;서울의 다음 핫플레이스는&lt;/div&gt;
+    &lt;div class=&quot;abs h1 gold&quot; style=&quot;left:0;right:0;top:520px;text-align:center;font-size:200px&quot; id=&quot;s1b&quot;&gt;퇴계로 5가&lt;/div&gt;
+    &lt;div class=&quot;abs h1&quot; style=&quot;left:0;right:0;top:770px;text-align:center;font-size:64px;color:#e8dcc6&quot; id=&quot;s1c&quot;&gt;DDP 남측&lt;/div&gt;
+    &lt;div class=&quot;abs&quot; id=&quot;seal&quot; style=&quot;left:1560px;top:500px;transform:rotate(-5deg)&quot;&gt;뜬&lt;br&gt;다&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- S2 --&gt;
+  &lt;div class=&quot;scene&quot; id=&quot;s2&quot;&gt;
+    &lt;div class=&quot;abs kicker&quot; style=&quot;left:140px;top:110px&quot; id=&quot;s2k&quot;&gt;TOEGYERO 5-GA · 퇴계로 5가&lt;/div&gt;
+    &lt;div class=&quot;abs h1&quot; style=&quot;left:140px;top:170px;font-size:84px&quot; id=&quot;s2h&quot;&gt;외국인 수요는 이미 데이터에 보인다&lt;/div&gt;
+    &lt;div class=&quot;abs card&quot; style=&quot;left:140px;top:420px&quot; id=&quot;c1&quot;&gt;&lt;div class=&quot;n&quot;&gt;외국인 카드 지출&lt;/div&gt;&lt;div class=&quot;t&quot;&gt;약 6.5배&lt;/div&gt;&lt;div class=&quot;d&quot;&gt;광희동, 2022 → 2024&lt;br&gt;한국관광데이터랩&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&quot;abs card&quot; style=&quot;left:700px;top:420px&quot; id=&quot;c2&quot;&gt;&lt;div class=&quot;n&quot;&gt;단기 체류 외국인&lt;/div&gt;&lt;div class=&quot;t&quot;&gt;16.1%&lt;/div&gt;&lt;div class=&quot;d&quot;&gt;홍대 서교동 9.2%&lt;br&gt;성수2가1동 3.3% · 2026-07&lt;/div&gt;&lt;/div&gt;
+    &lt;div class=&quot;abs&quot; id=&quot;s2f&quot; style=&quot;left:140px;top:930px;font-size:26px;color:#9fb0c5&quot;&gt;출처: 서울 열린데이터광장 생활인구·상권분석 API, 메트로신문 2026-02-08 · 외국인 카드 지출은 코로나 저점(2022) 기준&lt;/div&gt;
+    &lt;div class=&quot;abs card&quot; style=&quot;left:1260px;top:420px&quot; id=&quot;c3&quot;&gt;&lt;div class=&quot;n&quot;&gt;커피 점포&lt;/div&gt;&lt;div class=&quot;t&quot;&gt;9곳&lt;/div&gt;&lt;div class=&quot;d&quot;&gt;전부 개인 매장, 프랜차이즈 0%&lt;br&gt;연남동 181곳 · 2026Q2&lt;/div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- S3 --&gt;
+  &lt;div class=&quot;scene&quot; id=&quot;s3&quot;&gt;
+    &lt;div class=&quot;abs&quot; id=&quot;cap&quot;&gt;&lt;div&gt;&lt;span id=&quot;capn&quot;&gt;1&lt;/span&gt;&lt;span id=&quot;capt&quot;&gt;입장&lt;/span&gt;&lt;/div&gt;&lt;div id=&quot;caps&quot;&gt;퇴계로 5가에서 한 걸음, HANJAN으로&lt;/div&gt;&lt;/div&gt;
+    &lt;svg id=&quot;mapsvg&quot; class=&quot;abs&quot; viewBox=&quot;0 0 900 520&quot;&gt;
+      &lt;rect x=&quot;30&quot; y=&quot;40&quot; width=&quot;840&quot; height=&quot;440&quot; rx=&quot;10&quot; class=&quot;m-floor&quot;/&gt;
+      &lt;rect x=&quot;230&quot; y=&quot;66&quot; width=&quot;330&quot; height=&quot;46&quot; rx=&quot;4&quot; class=&quot;m-zone&quot;/&gt;&lt;text x=&quot;395&quot; y=&quot;94&quot; class=&quot;m-zt&quot; text-anchor=&quot;middle&quot;&gt;핸드드립 바 · 가배&lt;/text&gt;
+      &lt;rect x=&quot;690&quot; y=&quot;62&quot; width=&quot;150&quot; height=&quot;54&quot; rx=&quot;4&quot; class=&quot;m-zone&quot;/&gt;&lt;text x=&quot;765&quot; y=&quot;94&quot; class=&quot;m-zt&quot; text-anchor=&quot;middle&quot;&gt;포토 포인트&lt;/text&gt;
+      &lt;g class=&quot;m-seat&quot;&gt;&lt;circle cx=&quot;640&quot; cy=&quot;170&quot; r=&quot;16&quot;/&gt;&lt;circle cx=&quot;720&quot; cy=&quot;170&quot; r=&quot;16&quot;/&gt;&lt;circle cx=&quot;800&quot; cy=&quot;170&quot; r=&quot;16&quot;/&gt;
+        &lt;circle cx=&quot;612&quot; cy=&quot;170&quot; r=&quot;6&quot;/&gt;&lt;circle cx=&quot;668&quot; cy=&quot;170&quot; r=&quot;6&quot;/&gt;&lt;circle cx=&quot;640&quot; cy=&quot;142&quot; r=&quot;6&quot;/&gt;&lt;circle cx=&quot;640&quot; cy=&quot;198&quot; r=&quot;6&quot;/&gt;
+        &lt;circle cx=&quot;692&quot; cy=&quot;170&quot; r=&quot;6&quot;/&gt;&lt;circle cx=&quot;748&quot; cy=&quot;170&quot; r=&quot;6&quot;/&gt;&lt;circle cx=&quot;720&quot; cy=&quot;142&quot; r=&quot;6&quot;/&gt;&lt;circle cx=&quot;720&quot; cy=&quot;198&quot; r=&quot;6&quot;/&gt;
+        &lt;circle cx=&quot;772&quot; cy=&quot;170&quot; r=&quot;6&quot;/&gt;&lt;circle cx=&quot;828&quot; cy=&quot;170&quot; r=&quot;6&quot;/&gt;&lt;circle cx=&quot;800&quot; cy=&quot;142&quot; r=&quot;6&quot;/&gt;&lt;circle cx=&quot;800&quot; cy=&quot;198&quot; r=&quot;6&quot;/&gt;&lt;/g&gt;
+      &lt;rect x=&quot;112&quot; y=&quot;306&quot; width=&quot;76&quot; height=&quot;34&quot; rx=&quot;4&quot; class=&quot;m-zone&quot;/&gt;&lt;text x=&quot;150&quot; y=&quot;328&quot; class=&quot;m-zt&quot; text-anchor=&quot;middle&quot;&gt;가배 카드&lt;/text&gt;
+      &lt;rect x=&quot;230&quot; y=&quot;300&quot; width=&quot;170&quot; height=&quot;36&quot; rx=&quot;4&quot; class=&quot;m-zone&quot;/&gt;&lt;text x=&quot;315&quot; y=&quot;323&quot; class=&quot;m-zt&quot; text-anchor=&quot;middle&quot;&gt;주문 카운터 · QR&lt;/text&gt;
+      &lt;rect x=&quot;440&quot; y=&quot;300&quot; width=&quot;130&quot; height=&quot;36&quot; rx=&quot;4&quot; class=&quot;m-zone&quot;/&gt;&lt;text x=&quot;505&quot; y=&quot;323&quot; class=&quot;m-zt&quot; text-anchor=&quot;middle&quot;&gt;절기 다식 진열&lt;/text&gt;
+      &lt;path d=&quot;M560 89 H590 V215 H700&quot; class=&quot;m-serve&quot;/&gt;
+      &lt;path id=&quot;rt&quot; d=&quot;M80 480 V360 H640 V230 H760 V430 H140 V480&quot; class=&quot;m-routebg&quot;/&gt;
+      &lt;path id=&quot;rtd&quot; d=&quot;M80 480 V360 H640 V230 H760 V430 H140 V480&quot; class=&quot;m-route&quot; pathLength=&quot;1&quot; stroke-dasharray=&quot;1&quot; stroke-dashoffset=&quot;1&quot;/&gt;
+      &lt;g id=&quot;stops&quot;&gt;&lt;/g&gt;
+      &lt;circle id=&quot;dot&quot; r=&quot;8&quot; class=&quot;m-dot&quot;/&gt;
+    &lt;/svg&gt;
+  &lt;/div&gt;
+
+  &lt;!-- S4 --&gt;
+  &lt;div class=&quot;scene&quot; id=&quot;s4&quot;&gt;
+    &lt;div class=&quot;abs kicker&quot; style=&quot;left:0;right:0;top:250px;text-align:center&quot; id=&quot;s4k&quot;&gt;TOEGYERO 5-GA · DDP 남측&lt;/div&gt;
+    &lt;div class=&quot;abs h1&quot; style=&quot;left:0;right:0;top:310px;text-align:center;font-size:230px;letter-spacing:.02em&quot; id=&quot;s4a&quot;&gt;HANJAN&lt;/div&gt;
+    &lt;div class=&quot;abs h1 gold&quot; style=&quot;left:0;right:0;top:560px;text-align:center;font-size:84px&quot; id=&quot;s4b&quot;&gt;Coffee Seoul &lt;span style=&quot;font-size:48px;opacity:.7;font-family:Pretendard;font-weight:500&quot;&gt;(Han-jan)&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;abs h1&quot; style=&quot;left:0;right:0;top:700px;text-align:center;font-size:62px&quot; id=&quot;s4c&quot;&gt;가배 한 잔, 백 년 전 서울로.&lt;/div&gt;
+    &lt;div class=&quot;abs en&quot; style=&quot;left:0;right:0;top:800px;text-align:center;font-size:36px&quot; id=&quot;s4d&quot;&gt;Korea’s early coffee story in one cup.&lt;/div&gt;
+    &lt;div class=&quot;abs&quot; id=&quot;seal2&quot; style=&quot;left:1380px;top:340px;width:120px;height:120px;background:var(--red);color:#fbeedc;border-radius:10px;display:grid;place-items:center;font:900 42px/1.05 var(--serif);text-align:center;transform:rotate(-5deg);box-shadow:inset 0 0 0 5px rgba(251,238,220,.35)&quot;&gt;한&lt;br&gt;잔&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div id=&quot;progress&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;div id=&quot;ui&quot;&gt;&lt;button id=&quot;pp&quot;&gt;일시정지&lt;/button&gt;&lt;input id=&quot;seek&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;36&quot; step=&quot;0.01&quot; value=&quot;0&quot;&gt;&lt;span id=&quot;tm&quot;&gt;0.0 / 36.0s&lt;/span&gt;&lt;/div&gt;
+
+&lt;script&gt;
+const T = 36, SPEED = 1.5; // 재생 길이 24초
+const $ = id =&gt; document.getElementById(id);
+const ease = x =&gt; x &lt; .5 ? 2*x*x : 1 - Math.pow(-2*x + 2, 2) / 2;
+const lin = (t,a,b) =&gt; Math.min(1, Math.max(0, (t-a)/(b-a)));
+const seg = (t,a,b) =&gt; ease(lin(t,a,b));
+const win = (t,a,b,c,d) =&gt; seg(t,a,b) * (1 - seg(t,c,d));
+function put(el, o, y=0, x=0, s=1){ el.style.opacity = o; el.style.transform = (el.dataset.rot ? &#x27;rotate(&#x27;+el.dataset.rot+&#x27;) &#x27; : &#x27;&#x27;) + `translate(${x}px,${y}px) scale(${s})`; }
+
+const stopsXY = [[80,440],[150,360],[315,360],[505,360],[700,230],[600,430],[340,430]];
+const frac = [.022,.106,.197,.303,.483,.717,.861];
+const caps = [
+  [&#x27;입장&#x27;,&#x27;퇴계로 5가에서 한 걸음, HANJAN으로&#x27;],
+  [&#x27;가배 카드&#x27;,&#x27;대한제국 시절 커피 이야기를 한 장에&#x27;],
+  [&#x27;세트 주문&#x27;,&#x27;가배·다식 세트, QR로 미리 주문도&#x27;],
+  [&#x27;절기 다식 · 시음 카드&#x27;,&#x27;24절기마다 바뀌는 다식 한 가지&#x27;],
+  [&#x27;좌석 · 핸드드립 서빙&#x27;,&#x27;가배 카드를 읽으며 자리에서 한 잔&#x27;],
+  [&#x27;스탬프 · 컵홀더&#x27;,&#x27;한지 컵홀더와 #HANJANseoul&#x27;],
+  [&#x27;드립백 선물 · 택스리펀&#x27;,&#x27;집에 가져갈 한 잔까지&#x27;]
+];
+const stopsG = $(&#x27;stops&#x27;);
+stopsXY.forEach(([x,y],i)=&gt;{ const g=document.createElementNS(&#x27;http://www.w3.org/2000/svg&#x27;,&#x27;g&#x27;); g.setAttribute(&#x27;class&#x27;,&#x27;stop&#x27;); g.innerHTML=`&lt;circle cx=&quot;${x}&quot; cy=&quot;${y}&quot; r=&quot;15&quot;/&gt;&lt;text x=&quot;${x}&quot; y=&quot;${y+5}&quot; text-anchor=&quot;middle&quot;&gt;${i+1}&lt;/text&gt;`; stopsG.appendChild(g); });
+const rt = $(&#x27;rt&#x27;), L = rt.getTotalLength();
+// 스토리 타임라인: S3(맵) 구간 14~29초
+const M0 = 14, M1 = 29;
+document.querySelectorAll(&#x27;[data-rot]&#x27;);
+$(&#x27;seal&#x27;).dataset.rot = &#x27;-5deg&#x27;; $(&#x27;seal2&#x27;).dataset.rot = &#x27;-5deg&#x27;;
+
+function render(t){
+  // 달 위치: S1 중앙 상승 → S2 우상단 → S3 작게 → S4 중앙 뒤
+  const m1 = seg(t,0,4), m2 = seg(t,6,8), m3 = seg(t,13,15), m4 = seg(t,29,32);
+  let mx = 820, my = 640 - 380*m1, ms = .9 + .3*m1;
+  mx += (1500-820)*m2; my += (120-260)*m2; ms += (.6-1.2)*m2;
+  mx += (1650-1500)*m3; my += (60-120)*m3; ms += (.35-.6)*m3;
+  mx += (820-1650)*m4; my += (360-60)*m4; ms += (1.6-.35)*m4;
+  $(&#x27;moon&#x27;).style.transform = `translate(${mx}px,${my}px) scale(${ms})`;
+  $(&#x27;moon&#x27;).style.opacity = .9;
+  $(&#x27;ridges&#x27;).style.opacity = 1 - .6*m3 + .6*m4;
+
+  // S1 0-6.5
+  const w1 = win(t,.2,1.2,5.4,6.4);
+  $(&#x27;s1&#x27;).style.opacity = w1&gt;0?1:0;
+  put($(&#x27;s1k&#x27;), seg(t,.4,1.2), 20*(1-seg(t,.4,1.2)));
+  put($(&#x27;s1a&#x27;), seg(t,.8,2), 40*(1-seg(t,.8,2)));
+  put($(&#x27;s1b&#x27;), seg(t,1.8,3), 50*(1-seg(t,1.8,3)), 0, .9+.1*seg(t,1.8,3.2));
+  put($(&#x27;s1c&#x27;), seg(t,2.8,3.8), 30*(1-seg(t,2.8,3.8)));
+  put($(&#x27;seal&#x27;), seg(t,3.4,3.9), 0, 0, 2 - seg(t,3.4,3.9));
+  $(&#x27;s1&#x27;).style.opacity = Math.min(1,w1*3) * (1-seg(t,5.4,6.4));
+
+  // S2 6-13.6
+  const o2 = seg(t,6.2,7) * (1 - seg(t,12.6,13.6));
+  $(&#x27;s2&#x27;).style.opacity = o2;
+  put($(&#x27;s2k&#x27;), 1, 0); put($(&#x27;s2h&#x27;), seg(t,6.4,7.4), 30*(1-seg(t,6.4,7.4)));
+  [[&#x27;c1&#x27;,7.4],[&#x27;c2&#x27;,8.8],[&#x27;c3&#x27;,10.2]].forEach(([id,a])=&gt;put($(id), seg(t,a,a+.8), 40*(1-seg(t,a,a+.8))));
+
+  // S3 map 13.4-29.4
+  const o3 = seg(t,13.4,14.2) * (1 - seg(t,28.6,29.6));
+  $(&#x27;s3&#x27;).style.opacity = o3;
+  const p = lin(t, M0, M1-1);
+  $(&#x27;rtd&#x27;).setAttribute(&#x27;stroke-dashoffset&#x27;, 1 - p);
+  const pt = rt.getPointAtLength(L * p);
+  $(&#x27;dot&#x27;).setAttribute(&#x27;cx&#x27;, pt.x); $(&#x27;dot&#x27;).setAttribute(&#x27;cy&#x27;, pt.y);
+  let cur = 0;
+  frac.forEach((f,i)=&gt;{ const on = p &gt;= f - 0.005; if (on) cur = i; const c = stopsG.children[i].firstChild; c.style.fill = on ? &#x27;#c8372d&#x27; : &#x27;#4a3a3a&#x27;; });
+  $(&#x27;capn&#x27;).textContent = cur+1; $(&#x27;capt&#x27;).textContent = caps[cur][0]; $(&#x27;caps&#x27;).textContent = caps[cur][1];
+
+  // S4 29-36
+  const o4 = seg(t,29.2,30) ;
+  $(&#x27;s4&#x27;).style.opacity = o4;
+  put($(&#x27;s4k&#x27;), seg(t,29.4,30.2), 20*(1-seg(t,29.4,30.2)));
+  put($(&#x27;s4a&#x27;), seg(t,29.8,31), 40*(1-seg(t,29.8,31)), 0, .94+.06*seg(t,29.8,31.2));
+  put($(&#x27;s4b&#x27;), seg(t,30.8,31.8), 30*(1-seg(t,30.8,31.8)));
+  put($(&#x27;s4c&#x27;), seg(t,31.8,32.8), 30*(1-seg(t,31.8,32.8)));
+  put($(&#x27;s4d&#x27;), seg(t,32.6,33.6), 20*(1-seg(t,32.6,33.6)));
+  put($(&#x27;seal2&#x27;), seg(t,33,33.5), 0, 0, 2 - seg(t,33,33.5));
+  $(&#x27;stage&#x27;).style.opacity = 1 - seg(t,35.2,36);
+  $(&#x27;progress&#x27;).style.width = (t/T*100) + &#x27;%&#x27;;
+  $(&#x27;tm&#x27;).textContent = (t/SPEED).toFixed(1) + &#x27; / &#x27; + (T/SPEED).toFixed(1) + &#x27;s&#x27;;
+  $(&#x27;seek&#x27;).value = t;
+}
+
+function fit(){ const sc = Math.min(innerWidth/1920, (innerHeight-56)/1080); $(&#x27;stage&#x27;).style.transform = `translate(-50%,-50%) scale(${sc})`; }
+addEventListener(&#x27;resize&#x27;, fit); fit();
+
+let t = 0, playing = true, last = performance.now();
+function tick(now){ const dt = (now-last)/1000 * SPEED; last = now; if (playing){ t += dt; if (t &gt;= T) t = 0; } render(t); requestAnimationFrame(tick); }
+requestAnimationFrame(tick);
+$(&#x27;pp&#x27;).onclick = () =&gt; { playing = !playing; $(&#x27;pp&#x27;).textContent = playing ? &#x27;일시정지&#x27; : &#x27;재생&#x27;; };
+$(&#x27;seek&#x27;).oninput = e =&gt; { t = parseFloat(e.target.value); playing = false; $(&#x27;pp&#x27;).textContent = &#x27;재생&#x27;; };
+window.__seek = v =&gt; { t = v; playing = false; render(v); };
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+"></iframe></div>
+      <p class="film-label">FILM 24초 · 퇴계로 5가에서 HANJAN까지 · <a href="promo.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">새 창에서 보기</a></p>
+    </div>
+  </div>
+  <div class="loopbar" aria-hidden="true"></div>
+  <span class="scroll-hint" aria-hidden="true">SCROLL ↓</span>
+</header>
+<div class="obang" aria-hidden="true"></div>
+
+<main>
+<!-- ═════ 2. 정의와 지표 ═════ -->
+<section class="block" id="definition">
+  <div class="wrap reveal">
+    <p class="label">01 · DEFINITION</p>
+    <h2>우리는 “뜬다”를 이렇게 정의했다</h2>
+    <p class="lead"><b>앞으로 3년간 그 상권의 점포당 매출과 유동인구가 모두 서울 같은 유형 상권의 중위 증가율을 넘는 곳.</b><br>이 정의는 “결과”를 재는 기준이고, 아래 지표는 그 결과를 3년 앞서 가려내는 선행 지표다. 선행 신호 한 줄: 외국인이 늘고 새 카페가 먼저 들어오는 곳이 뜬다.</p>
+    <div class="grid g3"><article class="card "><p class="num">지표 1 · 선행(가정)</p><h3>외국인 체류인구 증가</h3><p><b>측정</b> 최근 12개월 일평균 ÷ 전년 동기, 서울 전체 증가율을 뺀 초과 성장</p><p><b>출처</b> 서울 열린데이터광장 생활인구(외국인)</p><p><b>한계</b> 행정동 단위, 코로나 이후 입국 회복이 섞임</p></article><article class="card "><p class="num">지표 2 · 필터</p><h3>외국인 비중</h3><p><b>측정</b> 외국인 체류 ÷ (외국인+내국인) 생활인구</p><p><b>출처</b> 같은 API, 2026-07 표본 4일</p><p><b>한계</b> 단기체류만 잡혀 방문형 상권은 놓침</p></article><article class="card "><p class="num">지표 3 · 선행(가정)</p><h3>개인 카페 순증</h3><p><b>측정</b> 커피 업종 (점포수 − 프랜차이즈 수)의 증감</p><p><b>출처</b> 서울시 상권분석 API 점포 데이터</p><p><b>한계</b> 스페셜티만 따로 셀 수 없음</p></article><article class="card "><p class="num">지표 4 · 결과 확인(후행)</p><h3>커피 점포당 매출</h3><p><b>측정</b> 커피 추정매출 ÷ 점포수의 전년 대비 증가</p><p><b>출처</b> 상권분석 API 매출·점포 데이터</p><p><b>한계</b> 외국인 매출만 따로 못 봄</p></article><article class="card "><p class="num">지표 5 · 결과 확인(동행)</p><h3>총 유동인구</h3><p><b>측정</b> 상권 총 유동인구의 전년 대비 증가율</p><p><b>출처</b> 상권분석 API 유동인구</p><p><b>한계</b> 통행과 목적 방문을 구분하지 못함</p></article></div>
+    <h3 class="sub-h">왜 이렇게 정의했나</h3>
+    <div class="grid g2"><article class="card"><p class="num">이유 1 · 두 조건 동시</p><h3>매출만, 유동만 보면 착시가 생긴다</h3><p>점포당 매출은 점포가 줄어도 오를 수 있고, 유동인구는 통행과 목적 방문을 구분하지 못한다. 그래서 “사람이 늘었는가”와 “돈이 되는가”를 <b>둘 다</b> 요구한다.</p><p><b>근거</b> 회현역(중구)은 2023Q2→2026Q2 점포당 매출이 +94%였지만 유동인구는 −17%였다. 매출만 봤다면 뜬 상권으로 오인했을 사례다. <small>서울 열린데이터광장 상권분석 API</small></p></article><article class="card"><p class="num">이유 2 · 점포당 매출</p><h3>총매출이 아니라 점포 한 곳이 버는 힘</h3><p>총매출은 점포 수만 늘어도 오른다. 새로 카페를 내는 사람에게 중요한 것은 점포 한 곳이 버는 매출이라 <b>점포당</b>으로 쟀다(커피-음료 업종 기준).</p><p><b>근거</b> 상권 단위 추정매출과 점포수를 같은 API에서 분기별로 가져와 계산한다. <small>VwsmTrdarSelngQq · VwsmTrdarStorQq, 2021Q1~2026Q2</small></p></article><article class="card"><p class="num">이유 3 · 같은 유형의 중위</p><h3>서울 전체 흐름과 상권 규모 차이를 걷어낸다</h3><p>절대 증가율은 해마다 의미가 달라진다. 서울 외국인 생활인구는 2026년 +0.3%, 2025년 −3.2%로 방향이 바뀌었다. 또 골목·발달·전통시장은 규모가 달라 같은 유형끼리 <b>중위 증가율</b>과 비교한다.</p><p><b>근거</b> 점포가 3~5곳뿐인 상권은 점포당 매출 증가율이 +284%처럼 요동치는데, 중위값 초과라는 순위 기준은 이런 이상치에 덜 흔들린다. <small>서울 열린데이터광장, 2023Q2→2026Q2</small></p></article><article class="card"><p class="num">이유 4 · 3년, 측정 가능</p><h3>매장 투자 주기에 맞고, 누구나 다시 계산할 수 있다</h3><p>3년은 임대 계약과 투자 회수를 판단하는 주기다(해석). 정의의 모든 요소가 서울시가 공개한 분기 데이터로 계산된다. <b>“재현된다”는 쉽게 말해, 같은 공개 데이터에 같은 계산식을 적용하면 누가 해도 같은 숫자가 나온다는 뜻이다.</b> 내 주장이 아니라 확인 가능한 숫자라는 의미다.</p><p><b>근거</b> 분석 대상 상권 1,650개, 최신 분기 2026Q2. 이 기준을 충족한 상권은 평가 대상 623곳 중 158곳(25.4%)으로, 너무 흔하지도 드물지도 않아 가려낼 의미가 있다. <small>같은 API, 2026-10-18 조회</small></p></article></div>
+    <p class="note">제외한 지표: 숙박시설 수(서울시가 갱신하지 않아 284곳 중 변화 0곳), 검색 관심도(한국어 검색은 내국인 신호). “선행”이라는 분류는 가정이다. 서울시 상권 데이터는 2021년 1분기부터이고 상권 단위 외국인 데이터는 없어 행정동·자치구 값을 썼다.</p>
+  </div>
+</section>
+
+<!-- ═════ 4. 추천 상권 3곳 ═════ -->
+<section class="block" id="districts">
+  <div class="wrap reveal">
+    <p class="label">02 · RECOMMENDATION</p>
+    <h2>결론: 3년 안에 뜰 상권은 <span data-slot="top1">퇴계로 5가</span> · <span data-slot="top2">동묘앞역</span> · <span data-slot="top3">방산종합시장</span></h2>
+    <p class="lead">성수·연남 같은 이미 뜬 곳은 제외했다. 외국인 비중이 높은 구에서 후보를 거르고, 정량 점수와 기사·커뮤니티 정성 조사를 합쳐 3곳으로 좁혔다.</p>
+    <div class="map-wrap"><div class="stage" aria-hidden="true">
+      <div class="arch">
+        <div class="stars"></div>
+        <div class="moon"></div>
+        <svg class="seoul" viewBox="0 0 400 360" aria-hidden="true">
+          <defs><linearGradient id="land" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2f5784"/><stop offset="1" stop-color="#1a355a"/></linearGradient></defs>
+          <path d="M190 10 L230 20 L270 45 L300 60 L335 85 L370 120 L385 165 L375 200 L340 235 L300 260 L265 285 L215 310 L165 300 L120 275 L75 265 L40 235 L20 200 L25 165 L50 135 L85 115 L120 80 L150 45 Z" fill="url(#land)" stroke="#c9a24a" stroke-width="1.6" stroke-linejoin="round" opacity=".95"/>
+          <g stroke="rgba(243,234,215,.12)" stroke-width="1" fill="none"><path d="M60 110 L340 110 M40 160 L380 160 M40 215 L370 215 M110 40 L110 290 M180 20 L180 305 M250 40 L250 280 M320 70 L320 250"/></g>
+          <path d="M392 168 C352 172 322 180 292 190 S242 196 216 192 S172 205 150 215 S108 205 84 195 S46 176 18 172" fill="none" stroke="#6fa3d1" stroke-width="9" stroke-linecap="round" opacity=".8"/>
+          <path d="M392 168 C352 172 322 180 292 190 S242 196 216 192 S172 205 150 215 S108 205 84 195 S46 176 18 172" fill="none" stroke="#cfe6f7" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="2 12" class="river-flow"/>
+          <text x="262" y="214" class="map-lbl" fill="#bfe0f5">한강</text>
+          <path d="M226 146 l5 -5 l5 5 l-5 5z" fill="#f4d58a"/><text x="238" y="141" class="map-lbl" fill="#f4d58a">DDP</text>
+        </svg>
+        <i class="ripple" style="left:55.9%;top:56.3%"></i><i class="ripple" style="left:55.9%;top:56.3%"></i><i class="ripple" style="left:55.9%;top:56.3%"></i>
+        <div class="pin top" style="left:55.9%;top:56.3%"><b></b><span data-slot="top1">퇴계로 5가</span></div>
+        <div class="pin two" style="left:29.8%;top:67.9%"><b></b><span data-slot="top2">[2순위]</span></div>
+        <div class="pin three" style="left:69.1%;top:71.6%"><b></b><span data-slot="top3">[3순위]</span></div>
+        <p class="map-note">서울 개념도 · 축척 없음 · 2·3순위 위치는 임시</p>
+      </div>
+
+      <div class="scenes">
+        <div class="scene"><small>01 · DEFINE</small><p data-slot="definition">[뜬다의 정의 한 줄]</p></div>
+        <div class="scene"><small>02 · SIGNALS</small>
+          <div class="bars">
+            <div><em data-slot="metric1">[지표 1]</em><span></span></div>
+            <div><em data-slot="metric2">[지표 2]</em><span></span></div>
+            <div><em data-slot="metric3">[지표 3]</em><span></span></div>
+          </div>
+        </div>
+        <div class="scene"><small>03 · DISTRICT</small><p><span data-slot="top1">[1순위 상권]</span>, 가장 먼저 뜬다</p></div>
+        <div class="scene"><small>04 · CONCEPT</small><p data-slot="conceptLine">[컨셉 한 줄]</p></div>
+      </div>
+    </div></div>
+    <div class="grid g3"><article class="card first"><span class="badge">1순위</span><p class="num">DISTRICT 01 · 조건부</p><h3><span data-slot="top1">퇴계로 5가</span> <small style="font-weight:400">중구 광희동 · DDP 남측</small></h3><p><b>1순위 이유</b> 외국인 체류 비중과 외국인 카드 지출, 두 종류의 외국인 데이터가 함께 가리키는 유일한 후보. 개인 카페 100%.</p><ul><li>광희동 외국인 카드 지출 149억 → 976억 원(약 6.5배) <small>2022→2024 · 메트로신문 2026-02-08 · 코로나 저점 기준, DDP 운영 재단 분석</small></li><li>단기 체류 외국인 16.1% <small>홍대 서교동 9.2%, 성수2가1동 3.3% · 서울 열린데이터광장 2026-07 표본 4일</small></li><li>커피 개인 카페 6 → 9곳, 프랜차이즈 0%, 점포당 매출 30.8백만원 <small>최근 1년 +29%, 3년 전 대비 −22% · 2023Q2→2026Q2</small></li></ul><p><b>전제</b> 오장동 재개발 구역 밖임을 확인. 임대료·권리금은 미확인. 신뢰도 중간.</p></article><article class="card "><p class="num">DISTRICT 02</p><h3><span data-slot="top2">동묘앞역</span> <small style="font-weight:400">종로구 창신1동</small></h3><p>검색량과 공실로 본 수요는 강하지만, 외국인 근거가 약하다.</p><ul><li>동묘 검색량 6.8만 건이 성수 5.36만 건을 처음 추월 <small>한국경제 2026-06-17 · 직접 확인</small></li><li>점포당 커피 매출 59.6 → 93.6백만원(3년 +57%), 커피 점포 6곳 <small>2023Q2→2026Q2 · 소표본</small></li><li>약점: 단기 외국인 5.8%, 종로5·6가동 외국인 방문 −28.5% <small>2024-08→2025-08 · 보도 인용</small></li></ul><p>창신 재개발 정비계획 수정가결. 신뢰도 중간.</p></article><article class="card "><p class="num">DISTRICT 03</p><h3><span data-slot="top3">방산종합시장</span> <small style="font-weight:400">중구 을지로동</small></h3><p>외국인 비중은 높지만 카페 상권으로 뜬다는 최근 근거가 없다.</p><ul><li>단기 체류 외국인 16.3%(후보 중 최고) <small>2026-07 표본 4일</small></li><li>커피 개인 카페 16 → 22곳, 프랜차이즈 12% <small>2023Q2→2026Q2</small></li><li>약점: 점포당 매출 3년 −31%, 유동인구 3년 −10%</li></ul><p>인근 오장동 재개발 포함 여부 미확인. 신뢰도 낮음.</p></article></div>
+    <p class="note">탈락: 마장축산물시장(카페 언급 없음, 악취 민원), 봉은사역 4번(커피 매출 비공개), 충정로역 3번(외국인 근거 없음·자료 오래됨). 이미 뜬 곳: 종로구청(익선동), 이화동.</p>
+  </div>
+</section>
+
+<!-- ═════ 3. 근거 (왜 지금 + 백테스트) ═════ -->
+<section class="block" id="evidence">
+  <div class="wrap reveal">
+    <p class="label">03 · EVIDENCE</p>
+    <h2>근거는 이렇다</h2>
+    <div class="callout"><b>선별 원칙.</b> 우리 지표는 상권을 “고르는” 용이 아니라 실패 확률이 높은 곳을 “거르는” 용이다. 서울 상권 421곳·454곳을 두 기간(2022→2025, 2023→2026)으로 확인했을 때, <b>외국인 비중이 높은 구에서 개인 카페가 덜 줄고 성공 확률이 약 3배</b>인 신호가 두 번 모두 재현됐다. 아래 3곳은 이 필터를 통과한 곳을 정성 근거로 좁힌 후보다.</div>
+
+    <h3 class="sub-h">왜 지금인가 · 두 가지 발견</h3>
+    <div class="grid g3"><article class="card "><p class="num">INSIGHT 01</p><h3>외국인이 많은 곳일수록 카페가 덜 망한다</h3><p class="big">19~21%</p><p>자치구 외국인 비중 상위 1/3의 성공 확률(하위 1/3은 6%). 흔한 직관(“관광객 상권은 불안정”)과 반대.</p><p><small>서울 열린데이터광장 2022→2025, 2023→2026, 커피 점포 8곳 이상 421·454곳</small></p></article><article class="card "><p class="num">INSIGHT 02</p><h3>체류 데이터에는 안 잡히는 외국인 수요</h3><p class="big">0.6% vs 20%</p><p>마장동의 단기 외국인 체류 비중과, 기사에서 말한 방문객 중 외국인 비율. 방문형 상권은 체류 인구에 덜 잡힌다(해석).</p><p><small>아시아경제 2026-08-14 · 보도 인용</small></p></article><article class="card "><p class="num">VS 이미 뜬 상권</p><h3>카페 수는 홍대의 1/20</h3><p class="big">9곳</p><p>퇴계로5가 커피 점포 9곳(전부 개인). 연남동 181곳, 홍대입구역 215곳, 성수카페거리 43곳. 단기 외국인 비중은 16.1%로 홍대 9.2%·성수 3.3%보다 높다.</p><p><small>상권분석 API 2026Q2 · 유동인구는 성수와 달리 아직 늘지 않음</small></p></article></div>
+    <h3 class="sub-h">외국인 비중 그룹별 성공 확률</h3>
+    <div class="table-scroll"><table><thead><tr><th>자치구 외국인 비중</th><th>성공 확률 2022→2025</th><th>성공 확률 2023→2026</th><th>개인 카페 순증 평균</th></tr></thead><tbody><tr><td>하위 1/3</td><td>6.4%</td><td>6.0%</td><td>−2.1곳 / −1.9곳</td></tr><tr><td>중간 1/3</td><td>16.4%</td><td>14.6%</td><td>−1.2곳 / −1.0곳</td></tr><tr><td><b>상위 1/3</b></td><td><b>19.1%</b></td><td><b>21.1%</b></td><td><b>−0.6곳 / −0.7곳</b></td></tr></tbody></table></div>
+    <p class="note">성공 = 개인 카페 순증 상위 25% &amp; 유동인구 증가 중위 초과(전체 평균 14%). 정의의 결과 기준과 별도로 카페 공급 확대를 보는 보조 기준이다. 자치구 외국인 비중 3분할, 서울 열린데이터광장 직접 계산.</p>
+
+    <h3 class="sub-h">1순위 비교표</h3>
+    <div class="table-scroll"><table><thead><tr><th>지표</th><th>퇴계로5가</th><th>동묘앞역</th><th>방산종합시장</th></tr></thead><tbody><tr><td>단기 외국인 비중(2026-07)</td><td><b>16.1%</b></td><td>5.8%</td><td>16.3%</td></tr><tr><td>프랜차이즈 비중</td><td><b>0%</b></td><td>50%</td><td>12%</td></tr><tr><td>점포당 커피 매출 최근 1년</td><td><b>+29%</b></td><td>+16%</td><td>−10%</td></tr><tr><td>점포당 커피 매출 3년</td><td>−22%</td><td><b>+57%</b></td><td>−31%</td></tr><tr><td>총 유동인구 3년</td><td>−4%</td><td><b>−2%</b></td><td>−10%</td></tr><tr><td>정성 수요 근거</td><td>외국인 카드 지출 6.5배(재단 자료)</td><td>검색량 성수 추월, 공실 0%</td><td>오래된 쇼핑 소개뿐</td></tr><tr><td>증거 신뢰도</td><td>중간</td><td>중간</td><td>낮음</td></tr></tbody></table></div>
+
+    <h3 class="sub-h">검증 · 두 기간에서 재현된 신호</h3>
+    <p class="lead">서울 상권 데이터가 있는 구간 안에서, 기준 시점을 달리한 두 기간으로 같은 지표를 계산했다. 2022→2025는 보완안을 만들 때 쓰지 않은 독립 기간이다.</p>
+    <div class="table-scroll"><table><thead><tr><th>지표</th><th>2022→2025 (독립)</th><th>2023→2026</th><th>의미</th></tr></thead><tbody><tr><td>자치구 외국인 비중 (AUC)</td><td><b>0.594</b></td><td><b>0.626</b></td><td>두 기간 모두 0.5를 넘은 유일한 지표</td></tr><tr><td>자치구 외국인 초과 성장 (AUC)</td><td>0.593</td><td>0.548</td><td>같은 방향</td></tr><tr><td>외국인 상위 1/3의 성공 확률</td><td><b>19.1%</b></td><td><b>21.1%</b></td><td>하위 1/3(6.4% · 6.0%)의 약 3배</td></tr></tbody></table></div>
+    <p class="note">평가 대상은 커피 점포 8곳 이상 상권(421곳, 454곳). AUC 0.5가 무작위 수준이다. 한계는 아래 리스크에 정리했다.</p>
+  </div>
+</section>
+
+<!-- ═════ 6. 매장 컨셉 ═════ -->
+<section class="block" id="concept">
+  <div class="wrap reveal">
+    <p class="label">04 · STORE CONCEPT</p>
+    <h2><span data-slot="top1">[1순위 상권]</span>에 낼 매장: HANJAN Coffee Seoul</h2>
+    <p class="lead"><b>가배 한 잔, 백 년 전 서울로.</b> 대한제국 시절 한국에 커피가 들어온 이야기를, 스페셜티 커피와 궁중풍 다식 세트로 맛보는 곳.<br><span class="en">Korea’s early coffee story in one cup: specialty coffee with court-inspired Korean sweets. HANJAN (한잔) means ‘one cup.’</span></p>
+    <div class="callout"><b>컨셉 한눈에.</b> 타겟은 외국인 관광객(주)과 내국인(보조, 매출 비중 65 : 35 가정). 대표 메뉴는 가배·다식 세트 15,000원과 핸드드립 9,000원대. 객단가는 1만원 이상, 초기 투자 5,000만원 기준 약 2년 4개월에 회수(전부 가정, 상권 실측 전).</div>
+
+    <div class="story">
+      <div class="story-card">
+        <p class="num">가배 카드 · STORY CARD</p>
+        <p class="story-ko">전해지는 이야기에 따르면, 대한제국의 첫 황제 고종은 궁에서 커피를 즐겼다. 그때는 커피를 ‘가배’, ‘양탕국’이라 불렀다.</p>
+        <p class="story-en en">Legend says Emperor Gojong of the Korean Empire enjoyed coffee in his palace. Back then, coffee was called “gabae” or “yangtang.”</p>
+        <p class="story-note">※ 출처 확인 후 게시(연도·호칭·‘양탕국’ 근거 포함). 인물 평가·정치·식민 시기 서술은 쓰지 않고, ‘개화기에 커피가 들어온 장면’으로만 한정.</p>
+      </div>
+      <div class="both">
+        <div><p class="num">외국인에게는</p><p>사극에서 본 궁중 다과를 직접 맛보는 서울 여행 코스. 한국에 커피가 들어온 이야기, 포토 포인트, 선물용 드립백.</p></div>
+        <div><p class="num">한국인에게는</p><p>외국인 친구와 부모님을 모시고 갈 곳. 전통 다과 취향의 한 잔. 평일 오전 세트와 24절기마다 바뀌는 다식으로 다시 올 이유.</p></div>
+      </div>
+    </div>
+
+    <div class="chain">
+      <div class="step"><p class="num">TARGET</p><h3>외국인 관광객 + 한국인</h3><p>개별여행(FIT) 20~40대 외국인이 주 타겟, 평일 내국인이 보조. 매출 비중 외국인 65 : 내국인 35 <small>(가정)</small></p><p class="why">근거: 광희동 외국인 카드 지출 약 6.5배(2022→2024, 코로나 저점 기준)</p></div>
+      <div class="step"><p class="num">MENU</p><h3>가배 + 다식 세트</h3><p>핸드드립에 다식·약과를 곁들인 세트가 중심. 낯선 재료는 맛 눈금과 한 줄 설명으로.</p><p class="why">근거: 체험은 세트로 팔릴 때 객단가가 오른다</p></div>
+      <div class="step"><p class="num">DIFFERENCE</p><h3>이야기 + 절기 다식</h3><p>가배 카드, 24절기마다 바뀌는 다식 1종, 농가 직거래, 자체 드립백. 소품 과잉 없는 개화기 분위기</p><p class="why">근거: 한지·달항아리 소품은 흉내 내기 쉽다</p></div>
+      <div class="step"><p class="num">FIT</p><h3>[상권 적합성]</h3><p>궁·근대 문화유산 같은 전통·로컬 자원 근접, 외국인 유동 증가, 임대료 상승 이전. 상권 확정 후 검증</p><p class="why">근거: [1순위 상권 데이터]</p></div>
+    </div>
+
+    <h3 class="sub-h">EXPERIENCE · 한 잔의 동선</h3>
+    <figure class="exp-map">
+      <svg viewBox="0 0 900 520" role="img" aria-labelledby="expT expD">
+        <title id="expT">매장 동선도</title>
+        <desc id="expD">입장, 가배 카드, 세트 주문, 절기 다식·시음 카드, 좌석 서빙과 포토, 스탬프·컵홀더, 드립백 선물·택스리펀 안내 순으로 이어지는 손님 동선</desc>
+
+        <!-- 바닥과 벽 -->
+        <rect x="30" y="40" width="840" height="440" rx="10" class="m-floor"/>
+        <path d="M64 480 H156" class="m-gap"/>
+        <text x="110" y="508" class="m-door" text-anchor="middle">입 · 퇴장</text>
+
+        <!-- 핸드드립 바 -->
+        <rect x="230" y="66" width="330" height="46" rx="4" class="m-zone"/>
+        <text x="395" y="94" class="m-zt" text-anchor="middle">핸드드립 바 · 가배 추출</text>
+
+        <!-- 포토 포인트 -->
+        <rect x="690" y="62" width="150" height="54" rx="4" class="m-zone m-photo"/>
+        <circle cx="715" cy="89" r="9" class="m-lamp"/>
+        <text x="775" y="86" class="m-zt" text-anchor="middle">포토 포인트</text>
+        <text x="775" y="104" class="m-zs" text-anchor="middle">한지 조명 · 창호</text>
+
+        <!-- 좌석 -->
+        <g class="m-seat">
+          <circle cx="640" cy="170" r="16"/><circle cx="720" cy="170" r="16"/><circle cx="800" cy="170" r="16"/>
+          <circle cx="612" cy="170" r="6"/><circle cx="668" cy="170" r="6"/><circle cx="640" cy="142" r="6"/><circle cx="640" cy="198" r="6"/><circle cx="692" cy="170" r="6"/><circle cx="748" cy="170" r="6"/><circle cx="720" cy="142" r="6"/><circle cx="720" cy="198" r="6"/><circle cx="772" cy="170" r="6"/><circle cx="828" cy="170" r="6"/><circle cx="800" cy="142" r="6"/><circle cx="800" cy="198" r="6"/>
+        </g>
+        <text x="820" y="330" class="m-zs" text-anchor="end">좌석 약 20석 (가정, 일부만 표시)</text>
+
+        <!-- 가배 카드 스탠드 -->
+        <rect x="112" y="306" width="76" height="34" rx="4" class="m-zone"/>
+        <text x="150" y="328" class="m-zt" text-anchor="middle">가배 카드</text>
+
+        <!-- 주문 카운터 -->
+        <rect x="230" y="300" width="170" height="36" rx="4" class="m-zone"/>
+        <text x="315" y="323" class="m-zt" text-anchor="middle">주문 카운터 · QR</text>
+
+        <!-- 절기 다식 진열 -->
+        <rect x="440" y="300" width="130" height="36" rx="4" class="m-zone"/>
+        <text x="505" y="323" class="m-zt" text-anchor="middle">절기 다식 진열</text>
+
+        <!-- 서빙 동선(직원) -->
+        <path id="serve" d="M560 89 H590 V215 H700" class="m-serve"/>
+        <text x="598" y="150" class="m-zs m-serve-t">서빙</text>
+
+        <!-- 손님 동선 -->
+        <path id="route" d="M80 480 V360 H640 V230 H760 V430 H140 V480" class="m-route-bg"/>
+        <path d="M80 480 V360 H640 V230 H760 V430 H140 V480" class="m-route"/>
+        <circle r="7" class="m-dot"/>
+
+        <!-- 정거장 -->
+        <g class="m-stop" style="--d:.31s"><circle cx="80" cy="440" r="15"/><text x="80" y="445" text-anchor="middle">1</text></g>
+        <g class="m-stop" style="--d:1.48s"><circle cx="150" cy="360" r="15"/><text x="150" y="365" text-anchor="middle">2</text></g>
+        <g class="m-stop" style="--d:2.76s"><circle cx="315" cy="360" r="15"/><text x="315" y="365" text-anchor="middle">3</text></g>
+        <g class="m-stop" style="--d:4.24s"><circle cx="505" cy="360" r="15"/><text x="505" y="365" text-anchor="middle">4</text></g>
+        <g class="m-stop" style="--d:6.76s"><circle cx="700" cy="230" r="15"/><text x="700" y="235" text-anchor="middle">5</text></g>
+        <g class="m-stop" style="--d:10.04s"><circle cx="600" cy="430" r="15"/><text x="600" y="435" text-anchor="middle">6</text></g>
+        <g class="m-stop" style="--d:12.05s"><circle cx="340" cy="430" r="15"/><text x="340" y="435" text-anchor="middle">7</text></g>
+
+        <!-- 정거장 이름 -->
+        <text x="104" y="444" class="m-label">입장</text>
+        <text x="150" y="392" class="m-label" text-anchor="middle">가배 카드 받기</text>
+        <text x="150" y="408" class="m-sub" text-anchor="middle">영문 우선 · 중·일 요약</text>
+        <text x="315" y="392" class="m-label" text-anchor="middle">세트 주문</text>
+        <text x="315" y="408" class="m-sub" text-anchor="middle">QR 사전 주문 가능</text>
+        <text x="505" y="392" class="m-label" text-anchor="middle">절기 다식 · 시음 카드</text>
+        <text x="505" y="408" class="m-sub" text-anchor="middle">24절기마다 1종 교체</text>
+        <text x="700" y="268" class="m-label" text-anchor="middle">좌석 · 핸드드립 서빙</text>
+        <text x="700" y="284" class="m-sub" text-anchor="middle">가배 카드 읽기 · 사진</text>
+        <text x="600" y="462" class="m-label" text-anchor="middle">스탬프 · 컵홀더</text>
+        <text x="340" y="462" class="m-label" text-anchor="middle">드립백 선물 · 택스리펀 안내</text>
+      </svg>
+      <figcaption>
+        <span class="lg"><i class="lg-route"></i>손님 동선</span>
+        <span class="lg"><i class="lg-serve"></i>직원 서빙</span>
+        <span class="lg-note">14평 · 좌석 약 20석 가정(도면에는 일부만 표시) · 스탬프에는 #HANJANseoul 과 영문 리뷰 QR</span>
+      </figcaption>
+    </figure>
+    <ol class="flow">
+      <li>입장</li><li>가배 카드<br><small>영문 우선 · 중·일 요약</small></li><li>세트 주문<br><small>QR 사전 주문 · 좌석 서빙</small></li><li>절기 다식·시음 카드</li><li>좌석 · 핸드드립 서빙<br><small>가배 카드 읽기 · 사진</small></li><li>스탬프 · 컵홀더<br><small>#HANJANseoul · 영문 리뷰 QR</small></li><li>드립백 선물 · 택스리펀 안내<br><small>주말 다식판 체험(가정)</small></li>
+    </ol>
+
+    <h3 class="sub-h">MENU · 낯선 이름을 쉽게</h3>
+    <div class="menu-grid">
+      <article class="card menu-card">
+        <p class="num">시그니처 세트</p><span class="menu-ico" aria-hidden="true"><svg viewBox="0 0 48 48" width="46" height="46" fill="none" stroke="#6a5f4d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 20h22v8a10 10 0 0 1-10 10h-2a10 10 0 0 1-10-10z"/><path d="M32 22h3a4 4 0 0 1 0 8h-3"/><path d="M16 8c-2 3 2 4 0 7M22 8c-2 3 2 4 0 7M28 8c-2 3 2 4 0 7" stroke="#c9a24a"/><rect x="8" y="41" width="7" height="5" fill="#c8372d" fill-opacity=".5"/><rect x="18" y="41" width="7" height="5" fill="#c9a24a" fill-opacity=".6"/><rect x="28" y="41" width="7" height="5" fill="#8fb5a3" fill-opacity=".7"/></svg></span>
+        <h3>Gabae &amp; Dasik Set</h3><p class="ko-name">가배·다식 세트</p>
+        <dl class="spec">
+          <div><dt>설명</dt><dd>싱글오리진 핸드드립에 다식·약과 3종을 곁들인 세트. 다식(Dasik)은 곡물·깨 가루를 눌러 만든 한국식 한입 과자.</dd></div>
+          <div><dt>맛·향</dt><dd>과일 향의 산뜻한 필터 커피 + 고소하고 은은하게 단 다식</dd></div>
+          <div class="price"><dt>금액</dt><dd>15,000원 <small>(가정)</small></dd></div>
+          <div><dt>비고</dt><dd>참깨·밀 가능(레시피 확정 후 표기). 핸드드립은 사전 주문·좌석 서빙, 하루 40세트 한도(가정)</dd></div>
+        </dl>
+      </article>
+      <article class="card menu-card">
+        <p class="num">라떼</p><span class="menu-ico" aria-hidden="true"><svg viewBox="0 0 48 48" width="46" height="46" fill="none" stroke="#6a5f4d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 20h22v8a10 10 0 0 1-10 10h-2a10 10 0 0 1-10-10z"/><path d="M32 22h3a4 4 0 0 1 0 8h-3"/><path d="M16 8c-2 3 2 4 0 7M22 8c-2 3 2 4 0 7M28 8c-2 3 2 4 0 7" stroke="#c9a24a"/><path d="M21 26c2-2 5-2 7 0-2 3-5 3-7 0z" fill="#c8372d" fill-opacity=".5" stroke="#c8372d"/></svg></span>
+        <h3>Yangtang Latte</h3><p class="ko-name">양탕국 라떼</p>
+        <dl class="spec">
+          <div><dt>설명</dt><dd>흑임자와 대추를 더한 라떼. 양탕국은 개화기에 커피를 부르던 별명이라 전해진다.</dd></div>
+          <div><dt>맛·향</dt><dd>구운 견과 같은 고소한 향 · 고소함 ●●● 단맛 ●●○</dd></div>
+          <div class="price"><dt>금액</dt><dd>7,500원 <small>(가정)</small></dd></div>
+          <div><dt>비고</dt><dd>우유·참깨 포함, 오트·두유 변경 가능. 카페인 포함</dd></div>
+        </dl>
+      </article>
+      <article class="card menu-card">
+        <p class="num">입문용</p><span class="menu-ico" aria-hidden="true"><svg viewBox="0 0 48 48" width="46" height="46" fill="none" stroke="#6a5f4d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 8h20l-3 32a3 3 0 0 1-3 3h-8a3 3 0 0 1-3-3z"/><circle cx="24" cy="20" r="6" fill="#c9a24a" fill-opacity=".5" stroke="#c9a24a"/><rect x="18" y="29" width="5" height="5" fill="#fff" fill-opacity=".6"/><rect x="25" y="26" width="5" height="5" fill="#fff" fill-opacity=".6"/></svg></span>
+        <h3>Yuja Moon Tonic</h3><p class="ko-name">유자 달 토닉</p>
+        <dl class="spec">
+          <div><dt>설명</dt><dd>콜드브루에 유자청과 탄산수를 더한 청량한 음료. 유자차는 한국 가정의 겨울 상비 음료.</dd></div>
+          <div><dt>맛·향</dt><dd>상큼한 시트러스 향 · 단맛 ●●○ 산뜻함 ●●●</dd></div>
+          <div class="price"><dt>금액</dt><dd>7,000원 <small>(가정)</small></dd></div>
+          <div><dt>비고</dt><dd>카페인 포함, 당 함유. 얼음·탄산 제공</dd></div>
+        </dl>
+      </article>
+      <article class="card menu-card">
+        <p class="num">안전 메뉴</p><span class="menu-ico" aria-hidden="true"><svg viewBox="0 0 48 48" width="46" height="46" fill="none" stroke="#6a5f4d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="14"/><circle cx="24" cy="24" r="9" fill="#e9dcc5" stroke="none"/><path d="M24 29c-5-3-5-8-1-9 1 0 2 1 1 3 0-2 1-3 2-3 4 1 4 6-2 9z" fill="#6b4226" stroke="none" opacity=".7"/></svg></span>
+        <h3>Flat White</h3><p class="ko-name">플랫화이트</p>
+        <dl class="spec">
+          <div><dt>설명</dt><dd>에스프레소에 부드럽게 스팀한 우유. 선택 토핑으로 흑임자 크림을 올릴 수 있다.</dd></div>
+          <div><dt>맛·향</dt><dd>익숙하고 부드러운 고소함 · 단맛 ●○○</dd></div>
+          <div class="price"><dt>금액</dt><dd>6,500원 <small>(가정)</small></dd></div>
+          <div><dt>비고</dt><dd>우유 포함, 오트·두유 변경 가능. 흑임자 크림 토핑은 참깨 포함. 카페인 포함</dd></div>
+        </dl>
+      </article>
+      <article class="card menu-card">
+        <p class="num">안전 메뉴</p><span class="menu-ico" aria-hidden="true"><svg viewBox="0 0 48 48" width="46" height="46" fill="none" stroke="#6a5f4d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 20h22v8a10 10 0 0 1-10 10h-2a10 10 0 0 1-10-10z"/><path d="M32 22h3a4 4 0 0 1 0 8h-3"/><path d="M16 8c-2 3 2 4 0 7M22 8c-2 3 2 4 0 7M28 8c-2 3 2 4 0 7" stroke="#c9a24a"/><circle cx="18" cy="26" r="2.5" fill="#c8372d" stroke="none"/><circle cx="25" cy="28" r="2.5" fill="#c8372d" stroke="none"/></svg></span>
+        <h3>Daechu Tea</h3><p class="ko-name">대추차</p>
+        <dl class="spec">
+          <div><dt>설명</dt><dd>대추를 오래 달인 따뜻한 한국 차.</dd></div>
+          <div><dt>맛·향</dt><dd>은은한 대추 향 · 단맛 ●●○</dd></div>
+          <div class="price"><dt>금액</dt><dd>6,500원 <small>(가정)</small></dd></div>
+          <div><dt>비고</dt><dd>비카페인. 알코올·돼지 성분 없음(레시피 확정 후 표기)</dd></div>
+        </dl>
+      </article>
+    </div>
+    <p class="note">모든 항목을 같은 형식(메뉴명 · 설명 · 맛·향 · 금액 · 비고)으로 표기. 금액은 부가세 포함 가정가이고, 성분·알레르기는 레시피 확정 후 갱신. 고정 3종 + 안전 메뉴 2종이며 절기마다 다식 1종만 교체(인쇄물은 QR로 대체). 중·일 안내는 인쇄 한 줄 요약과 QR.</p>
+    <h3 class="sub-h">DRIP · 핸드드립 메뉴</h3>
+    <div class="menu-grid">
+      <article class="card menu-card">
+        <p class="num">핸드드립 · 싱글오리진</p><span class="menu-ico" aria-hidden="true"><svg viewBox="0 0 48 48" width="46" height="46" fill="none" stroke="#6a5f4d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 14h24l-6 12h-12z" fill="#c8372d" fill-opacity=".25"/><path d="M18 26v3M30 26v3"/><path d="M14 30h20v6a6 6 0 0 1-6 6h-8a6 6 0 0 1-6-6z"/><path d="M24 18v4" stroke="#c8372d"/></svg></span>
+        <h3>Ethiopia Hand Drip</h3><p class="ko-name">에티오피아 핸드드립</p>
+        <dl class="spec">
+          <div><dt>설명</dt><dd>산지별 싱글오리진 원두를 주문 후 한 잔씩 핸드드립으로 내린다. 가배 세트의 기본 커피.</dd></div>
+          <div><dt>맛·향</dt><dd>꽃과 베리 같은 향 · 산뜻한 산미 ●●●</dd></div>
+          <div class="price"><dt>금액</dt><dd>9,800원 <small>(가정)</small></dd></div>
+          <div><dt>비고</dt><dd>카페인 포함. 추출 약 4분. 원산지·로스팅일 표기</dd></div>
+        </dl>
+      </article>
+      <article class="card menu-card">
+        <p class="num">핸드드립 · 싱글오리진</p><span class="menu-ico" aria-hidden="true"><svg viewBox="0 0 48 48" width="46" height="46" fill="none" stroke="#6a5f4d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 14h24l-6 12h-12z" fill="#c9a24a" fill-opacity=".25"/><path d="M18 26v3M30 26v3"/><path d="M14 30h20v6a6 6 0 0 1-6 6h-8a6 6 0 0 1-6-6z"/><path d="M24 18v4" stroke="#c9a24a"/></svg></span>
+        <h3>Colombia Hand Drip</h3><p class="ko-name">콜롬비아 핸드드립</p>
+        <dl class="spec">
+          <div><dt>설명</dt><dd>단맛이 도드라지고 균형 잡힌 싱글오리진. 처음 마시는 사람에게 권하는 드립.</dd></div>
+          <div><dt>맛·향</dt><dd>견과와 카라멜 같은 단맛 · 산미 ●●○</dd></div>
+          <div class="price"><dt>금액</dt><dd>9,200원 <small>(가정)</small></dd></div>
+          <div><dt>비고</dt><dd>카페인 포함. 추출 약 4분. 원산지·로스팅일 표기</dd></div>
+        </dl>
+      </article>
+      <article class="card menu-card">
+        <p class="num">핸드드립 · 블렌드</p><span class="menu-ico" aria-hidden="true"><svg viewBox="0 0 48 48" width="46" height="46" fill="none" stroke="#6a5f4d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 14h24l-6 12h-12z" fill="#6b4226" fill-opacity=".25"/><path d="M18 26v3M30 26v3"/><path d="M14 30h20v6a6 6 0 0 1-6 6h-8a6 6 0 0 1-6-6z"/><path d="M24 18v4" stroke="#6b4226"/></svg></span>
+        <h3>Gabae Blend Drip</h3><p class="ko-name">가배 블렌드 핸드드립</p>
+        <dl class="spec">
+          <div><dt>설명</dt><dd>개화기에 마셨다는 짙은 커피를 오늘의 스페셜티 원두로 해석한 블렌드.</dd></div>
+          <div><dt>맛·향</dt><dd>고소하고 묵직한 바디 · 산미 ●○○</dd></div>
+          <div class="price"><dt>금액</dt><dd>9,000원 <small>(가정)</small></dd></div>
+          <div><dt>비고</dt><dd>카페인 포함. 우유·시럽 없이 블랙 권장</dd></div>
+        </dl>
+      </article>
+    </div>
+    <p class="note">가배 세트는 위 핸드드립 중 하나를 고르는 구성이다(세트 15,000원은 핸드드립 + 다식·약과 3종 구성). 금액은 모두 부가세 포함 가정가.</p>
+
+    <h3 class="sub-h">GOODS · 원두와 선물</h3>
+    <div class="menu-grid">
+      <article class="card menu-card">
+        <p class="num">원두 · 200g</p><span class="menu-ico" aria-hidden="true"><svg viewBox="0 0 48 48" width="46" height="46" fill="none" stroke="#6a5f4d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12h24l3 30H9z" fill="#d8c9a6" fill-opacity=".5"/><path d="M12 12l3-5h18l3 5"/><ellipse cx="24" cy="24" rx="5" ry="7.5" fill="#6b4226" stroke="none"/><path d="M24 17c-3 5 3 9 0 14" stroke="#e9dcc5" stroke-width="1.5"/></svg></span>
+        <h3>Single Origin Beans</h3><p class="ko-name">싱글오리진 원두 200g</p>
+        <dl class="spec">
+          <div><dt>설명</dt><dd>매장 핸드드립에 쓰는 싱글오리진 원두. 분쇄 방식(핸드드립·에스프레소) 선택.</dd></div>
+          <div><dt>맛·향</dt><dd>꽃·과일 향의 산뜻한 맛</dd></div>
+          <div class="price"><dt>금액</dt><dd>28,000원 <small>(가정)</small></dd></div>
+          <div><dt>비고</dt><dd>원산지·로스팅일 표기. 개봉 전 보관법 안내</dd></div>
+        </dl>
+      </article>
+      <article class="card menu-card">
+        <p class="num">원두 · 200g</p><span class="menu-ico" aria-hidden="true"><svg viewBox="0 0 48 48" width="46" height="46" fill="none" stroke="#6a5f4d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12h24l3 30H9z" fill="#3a2a22" fill-opacity=".35"/><path d="M12 12l3-5h18l3 5"/><ellipse cx="24" cy="24" rx="5" ry="7.5" fill="#6b4226" stroke="none"/><path d="M24 17c-3 5 3 9 0 14" stroke="#e9dcc5" stroke-width="1.5"/></svg></span>
+        <h3>Gabae Blend Beans</h3><p class="ko-name">가배 블렌드 원두 200g</p>
+        <dl class="spec">
+          <div><dt>설명</dt><dd>가배 블렌드 핸드드립과 같은 원두. 집에서 같은 맛을 재현할 수 있다.</dd></div>
+          <div><dt>맛·향</dt><dd>고소하고 묵직한 맛</dd></div>
+          <div class="price"><dt>금액</dt><dd>24,000원 <small>(가정)</small></dd></div>
+          <div><dt>비고</dt><dd>원산지·로스팅일 표기. 분쇄 선택</dd></div>
+        </dl>
+      </article>
+      <article class="card menu-card">
+        <p class="num">선물 · 5개입</p><span class="menu-ico" aria-hidden="true"><svg viewBox="0 0 48 48" width="46" height="46" fill="none" stroke="#6a5f4d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="12" y="14" width="24" height="26" rx="2" fill="#d8c9a6" fill-opacity=".5"/><path d="M12 14l-3-5h30l-3 5M16 9v-3M32 9v-3"/><circle cx="24" cy="28" r="5" stroke="#6b4226"/></svg></span>
+        <h3>Drip Bag Gift Set</h3><p class="ko-name">드립백 선물세트</p>
+        <dl class="spec">
+          <div><dt>설명</dt><dd>뜨거운 물만 있으면 마실 수 있는 드립백 5개입. 한지 포장, 영문·중문 안내 카드 포함.</dd></div>
+          <div><dt>맛·향</dt><dd>가배 블렌드 · 고소함 ●●●</dd></div>
+          <div class="price"><dt>금액</dt><dd>19,000원 <small>(가정)</small></dd></div>
+          <div><dt>비고</dt><dd>여행 중 휴대·선물용. 택스리펀 대상 여부 확인 필요</dd></div>
+        </dl>
+      </article>
+      <article class="card menu-card">
+        <p class="num">선물 · 상자</p><span class="menu-ico" aria-hidden="true"><svg viewBox="0 0 48 48" width="46" height="46" fill="none" stroke="#6a5f4d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="18" width="32" height="22" rx="2"/><path d="M6 18h36v-5H6z" fill="#c8372d" fill-opacity=".3"/><rect x="12" y="24" width="7" height="7" fill="#c9a24a" fill-opacity=".6"/><rect x="21" y="24" width="7" height="7" fill="#c8372d" fill-opacity=".45"/><rect x="30" y="24" width="7" height="7" fill="#8fb5a3" fill-opacity=".7"/></svg></span>
+        <h3>Dasik &amp; Yakgwa Box</h3><p class="ko-name">다식·약과 선물 상자</p>
+        <dl class="spec">
+          <div><dt>설명</dt><dd>절기 다식 1종과 약과를 소포장해 담은 선물 상자. 유통기한 표기.</dd></div>
+          <div><dt>맛·향</dt><dd>고소하고 은은하게 단 맛</dd></div>
+          <div class="price"><dt>금액</dt><dd>24,000원 <small>(가정)</small></dd></div>
+          <div><dt>비고</dt><dd>참깨·밀 가능(레시피 확정 후 표기). 유통기한 확인 후 판매</dd></div>
+        </dl>
+      </article>
+      <article class="card menu-card">
+        <p class="num">굿즈</p><span class="menu-ico" aria-hidden="true"><svg viewBox="0 0 48 48" width="46" height="46" fill="none" stroke="#6a5f4d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="12" width="32" height="24" rx="2" fill="#fffaf0"/><circle cx="29" cy="22" r="5" fill="#c9a24a" fill-opacity=".6" stroke="#c9a24a"/><path d="M13 30h14M13 26h8"/></svg></span>
+        <h3>Gabae Card Postcards</h3><p class="ko-name">가배 카드 엽서 세트</p>
+        <dl class="spec">
+          <div><dt>설명</dt><dd>가배 이야기 카드를 엽서로 만든 5장 세트. 한지 컵홀더 디자인 포함.</dd></div>
+          <div><dt>맛·향</dt><dd>해당 없음</dd></div>
+          <div class="price"><dt>금액</dt><dd>8,000원 <small>(가정)</small></dd></div>
+          <div><dt>비고</dt><dd>인쇄물. 영문 우선 문구</dd></div>
+        </dl>
+      </article>
+    </div>
+    <p class="note">굿즈는 여행 중 휴대와 선물 수요를 겨냥한다. 금액은 부가세 포함 가정가이며 원두 원가·포장비 견적 후 확정한다. 이 매출은 아래 손익 표에 넣지 않았다(하방 완충용).</p>
+
+
+    <h3 class="sub-h">NUMBERS · 돈이 되는가 <small>(측정값과 가정을 구분해 표시)</small></h3>
+    <div class="callout"><b>요약.</b> 핸드드립을 9,000원대, 세트를 15,000원으로 설계하면 객단가가 <b>1만원을 넘고</b> 1년차에 소폭 흑자를 낸다. 초기 투자 5,000만원 기준 <b>약 2년 4개월</b>에 회수하고, 3년 누적 순이익은 약 7,704만원이다. 전제는 세트 중심 메뉴, 임대료 300만원 안팎 협상, 인건비 600만원이다. 가격이 오른 만큼 객수가 줄 위험이 있어, 가격 수용도는 외국인 시음·메뉴판 테스트로 확인한다.</div>
+
+    <h3 class="sub-h" style="font-size:17px">객단가 1만원 이상을 만드는 법</h3>
+    <div class="table-scroll"><table><thead><tr><th>구성</th><th>1년차</th><th>2년차 이후</th><th>단가</th></tr></thead><tbody><tr><td>가배·다식 세트 비중</td><td>35%</td><td>40%</td><td>15,000원</td></tr><tr><td>단품 비중</td><td>65%</td><td>60%</td><td>평균 7,800원 (핸드드립 9,000원대 포함)</td></tr><tr><td>다식 추가(업셀) 선택 고객</td><td>20%</td><td>25%</td><td>+2,500원</td></tr><tr><td><b>평균 객단가</b></td><td><b>10,820원</b></td><td><b>11,305원</b></td><td>세트 원가 4,560원, 단품 28%, 업셀 40% (가정)</td></tr></tbody></table></div>
+    <p class="note">세트를 사전 주문 첫 화면에 두고, 가배 카드와 시음 카드에서 세트로 안내해 비중을 올린다. 하루 세트 한도는 40세트(가정)이고 위 비중이면 하루 21~30세트라 한도 안이다. 가격을 올렸으므로 객수를 이전 계획(70~85명)보다 낮은 60명에서 시작해 75명까지만 올린다.</p>
+
+    <h3 class="sub-h" style="font-size:17px">3년 손익 계획</h3>
+    <div class="table-scroll"><table><thead><tr><th>구간</th><th>하루 객수</th><th>객단가</th><th>월 매출(부가세 포함)</th><th>월 매출총이익</th><th>월 순이익</th><th>누적 순이익</th></tr></thead><tbody><tr><td>1년차 · 소폭 흑자</td><td>60명</td><td>10,820원</td><td>1,688만원</td><td>1,078만원</td><td><b>약 +28만원</b></td><td>336만원</td></tr><tr><td>2년차</td><td>70명</td><td>11,305원</td><td>2,058만원</td><td>1,310만원</td><td><b>약 +260만원</b></td><td>3,456만원</td></tr><tr><td>3년차</td><td>75명</td><td>11,305원</td><td>2,204만원</td><td>1,404만원</td><td><b>약 +354만원</b></td><td>7,704만원</td></tr></tbody></table></div>
+    <p class="note">월 고정비 1,050만원 = 임대료 300만(협상 가정) + 인건비 600만 + 기타 150만. 매출총이익 = 매출 ÷ 1.1 × 마진. 월 26일 영업, 카드 수수료·점주 인건비 미반영. 굿즈 매출은 넣지 않았다(하방 완충용). 투자 5,000만원은 가정이다.</p>
+
+    <h3 class="sub-h" style="font-size:17px">측정값과 가정</h3>
+    <div class="table-scroll"><table><thead><tr><th>항목</th><th>값</th><th>구분 · 출처</th></tr></thead><tbody><tr><td>퇴계로5가 커피 점포당 매출</td><td>30.8백만원 (분기 합계로 해석 시 월 약 1,027만원)</td><td><b>측정</b> · 서울 열린데이터광장 VwsmTrdarSelngQq, 2026Q2 · 월/분기 단위는 항목 정의서로 재확인 필요</td></tr><tr><td>커피 점포 수</td><td>9곳, 전부 개인 매장</td><td><b>측정</b> · VwsmTrdarStorQq, 2026Q2</td></tr><tr><td>최저임금(2026)</td><td>시간 10,320원, 월 환산 215.7만원(주휴 포함)</td><td><b>측정</b> · 고용노동부 고시, 메트로신문 2025-08-05</td></tr><tr><td>월 인건비</td><td>600만원 ≈ 최저임금 2.8명분</td><td>가정 · 피크 2명 + 비피크 1명 시간 배치</td></tr><tr><td>월 임대료</td><td>300만원 (미확인)</td><td><b>미측정</b> · 한국부동산원 R-ONE 중구 자료 확인, 협상 전제</td></tr><tr><td>메뉴 가격(핸드드립 9,000원대, 세트 15,000원)</td><td>주변 카페 가격과 비교 전</td><td>가정 · 외국인 시음·메뉴판 테스트로 수용도 확인</td></tr><tr><td>원가</td><td>세트 4,560원, 단품 28%, 업셀 40%</td><td>가정 · 원두·다식 견적 전</td></tr><tr><td>초기 투자(인테리어·장비)</td><td>5,000만원 (미확인)</td><td><b>미측정</b> · 견적 필요</td></tr></tbody></table></div>
+    <p class="note"><b>측정 평균과의 차이.</b> 측정된 평균 점포 매출이 분기 합계라면 월 약 1,027만원으로, 위 계획의 1년차 월 매출(1,688만원)은 상권 평균의 약 1.6배다. 즉 이 계획은 평균 수준의 매장이 아니라, 세트·이야기·절기 다식으로 차별화된 매장을 전제한다. 점포당 매출 단위가 월이라면 평균 점포도 흑자라서 이 부담이 사라진다. 발표 전에 단위를 확인한다.</p>
+    <p class="note"><b>운영 가정</b> 가배 세트는 항상 핸드드립(QR 사전 주문·좌석 서빙). 피크 2시간의 일반 필터 단품만 배치 브루로 처리한다. 다식은 주 2회 발주, 폐기율 5% 가정.</p>
+
+    <p class="concept-summary">가배 한 잔, 백 년 전 서울로. · HANJAN Coffee Seoul <small>(이름 백업: <span class="ph">Moonjar Coffee Seoul / Hanji Cup Seoul</span>, 테스트에서 발음 정답률 70% 미만 또는 술 연상 20% 초과이면 교체 검토)</small></p>
+  </div>
+</section>
+
+<!-- ═════ 7. 리스크 ═════ -->
+<section class="block" id="risk">
+  <div class="wrap reveal">
+    <p class="label">05 · RISK</p>
+    <h2>이 추천이 틀릴 수 있는 이유</h2>
+    <article class="card risk" style="margin-top:28px">
+      <h3>외국인 수요가 이미 정점을 지나 줄고 있을 수 있다</h3>
+      <p>이 추천의 전제 전체가 “다수 외국인이 온다”인데 그 근거가 약해지고 있다.</p>
+      <ul><li>종로5·6가동(동대문시장) 외국인 방문 −28.5%, 회현동(남대문) −11.5% <small>2024-08→2025-08, SKT 인용 · 보도 인용 · 광희동의 같은 지표는 미확인</small></li>
+      <li>서울 외국인 생활인구(6~7월 일평균) 2019년 약 115.6만 명 → 2026년 약 103.6만 명, 코로나 이전을 회복하지 못함</li>
+      <li>1순위의 “외국인 카드 지출 6.5배”는 2022년 코로나 저점 기준이고, 3년 점포당 매출은 −22%</li></ul>
+      <p><b>철회 신호</b> (임계값은 가정)</p>
+      <ul><li>광희동 외국인 카드 지출 또는 단기 체류 비중이 2개 분기 연속 전년 대비 −10% 이하</li>
+      <li>퇴계로5가 커피 점포당 매출 증가율이 2개 분기 연속 마이너스(지금은 +29%)</li>
+      <li>선결 조건: 입지가 오장동 재개발 정비구역 안으로 확인되면 즉시 철회</li></ul>
+      <p style="margin-top:16px"><b>근거의 한계</b></p>
+      <ul>
+        <li>백테스트에서 우리 지표 점수 전체는 3년 뒤 상권 성장을 맞히지 못했다(2023Q2→2026Q2, 623곳, AUC 0.549, 난수 수준). 재현된 것은 외국인 비중 신호 하나다. 그래서 추천은 확정이 아니라 후보다.</li>
+        <li>성수(2015~2018)·연남(2013~2016)은 서울시 상권 데이터가 2021년 1분기부터라 같은 방식으로 검증하지 못했다.</li>
+        <li>외국인 신호는 자치구 단위라 실질 표본이 25개 구이고, 매출은 예측하지 못했다. 상위 20%만 보면 효과가 약해진다(기저율 대비 1.0~1.35배).</li>
+        <li>후보 3곳 모두 최근 3년 총 유동인구가 줄었다(동묘 −2%, 퇴계로5가 −4%, 방산시장 −10%).</li>
+        <li>2023년에 같은 방식으로 상위 10%였던 퇴계로5가·방산시장·충정로역 3번은 3년 뒤 점포당 매출이 −22%~−33%였다.</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<!-- ═════ 8. 출처 ═════ -->
+<section class="block" id="sources">
+  <div class="wrap reveal">
+    <p class="label">06 · SOURCES</p>
+    <h2>출처</h2>
+    <ol class="sources">
+      <li>서울 열린데이터광장 Open API(생활인구 외국인 SPOP_FORN_TEMP_RESD_DONG·SPOP_FORN_LONG_RESD_DONG·SPOP_LOCAL_RESD_DONG·SPOP_DAILYSUM_JACHI, 상권분석 VwsmTrdarStorQq·SelngQq·FlpopQq·FcltyQq) · data.seoul.go.kr · 2026-10-18 조회</li>
+      <li>광희동 외국인 카드 지출 · 메트로신문 · metroseoul.co.kr/article/20260208500202 · 2026-02-08 · 직접 확인</li>
+      <li>동묘 검색량·공실률 · 한국경제 · hankyung.com/article/2026061723367 · 2026-06-17 · 직접 확인</li>
+      <li>동묘 외국인 손님 발언 · 한국경제 · hankyung.com/amp/2025062621607 · 2025-06-26 · 보도 인용</li>
+      <li>종로5·6가동·회현동·성수동 외국인 방문 증감 · 다음 · v.daum.net/v/20251007060152951 · 2025-10-07 · 보도 인용</li>
+      <li>창신 재개발 정비계획 · 더팩트 · news.tf.co.kr/read/economy/2264633.htm · 2025-11-20 · 보도 인용</li>
+      <li>오장동 재개발 정비구역 · 데일리안 · dailian.co.kr/news/view/1672511 · 2026-07-30 · 보도 인용</li>
+      <li>마장동 외국인 방문 · 아시아경제 · view.asiae.co.kr/en/article/2026081314380471832 · 2026-08-14 · 보도 인용</li>
+      <li>미확인: 세 상권의 임대료·권리금·공실, 스페셜티 카페 실제 수, 외국인이 이 지역 카페를 찾는다는 직접 근거, 재개발 구역 포함 여부. “보도 인용”은 발표 전 재확인</li>
+    </ol>
+  </div>
+</section>
+</main>
+
+<div class="obang" aria-hidden="true"></div>
+<footer>kearney-hotspot-1-cafe · 1조 · 스페셜티 카페</footer>
+
+<script>
+/* 내용 교체: R의 content.md가 오면 이 값만 바꾸면 히어로를 포함한 전체에 반영됨 */
+const CONTENT = {
+  top1: "퇴계로 5가",
+  top2: "동묘앞역",
+  top3: "방산종합시장",
+  conceptLine: "가배 한 잔, 백 년 전 서울로.",
+  conceptSub: "대한제국 시절 커피 이야기를 스페셜티와 다식으로 맛보는 곳.",
+  definition: "3년 뒤 매출·유동인구가 같은 유형 중위값을 넘는 곳",
+  metric1: "점포당 매출 증가",
+  metric2: "유동인구 증가",
+  metric3: "외국인 체류 비중"
+};
+document.querySelectorAll("[data-slot]").forEach(el => {
+  const v = CONTENT[el.dataset.slot];
+  if (v && !el.closest(".sub-en")) el.textContent = v;
+});
+
+document.body.classList.remove("no-js");
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: 0, rootMargin: '0px 0px -6% 0px' });
+setTimeout(() => document.querySelectorAll('.reveal').forEach(el => el.classList.add('in')), 2500);
+document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+
+/* 긴 섹션을 탭으로 나눈다 */
+function makeTabs(id, labels, firstTitle) {
+  const sec = document.getElementById(id); if (!sec) return;
+  const wrap = sec.querySelector('.wrap'); const kids = [...wrap.children];
+  const head = [], panels = [], tail = []; let cur = null;
+  for (const el of kids) {
+    if (el.matches('.label') || el.tagName === 'H2') { head.push(el); continue; }
+    if (el.matches('.sub-h') && !el.getAttribute('style')) {
+      const key = Object.keys(labels).find(k => el.textContent.trim().startsWith(k));
+      cur = { title: key ? labels[key] : el.textContent.trim(), els: [el] }; panels.push(cur); continue;
+    }
+    if (el.matches('.concept-summary')) { tail.push(el); continue; }
+    if (cur) { cur.els.push(el); continue; }
+    if (firstTitle && !el.matches('.lead, .callout, .story, .chain')) {
+      cur = { title: firstTitle, els: [el] }; panels.push(cur); continue;
+    }
+    head.push(el);
+  }
+  if (panels.length < 2) return;
+  const bar = document.createElement('div'); bar.className = 'tabbar'; bar.setAttribute('role', 'tablist');
+  const holder = document.createElement('div');
+  panels.forEach((pn, i) => {
+    const panel = document.createElement('div'); panel.className = 'tabpanel'; panel.setAttribute('role', 'tabpanel');
+    pn.els.forEach(e => panel.appendChild(e)); if (i) panel.hidden = true;
+    const b = document.createElement('button'); b.type = 'button'; b.textContent = pn.title; b.setAttribute('role', 'tab'); b.setAttribute('aria-selected', i ? 'false' : 'true');
+    b.onclick = () => { bar.querySelectorAll('button').forEach((x, j) => x.setAttribute('aria-selected', j === i ? 'true' : 'false')); holder.querySelectorAll('.tabpanel').forEach((x, j) => x.hidden = j !== i); };
+    bar.appendChild(b); holder.appendChild(panel);
+  });
+  const lastHead = head[head.length - 1];
+  const anchor = [...wrap.children].find(c => !head.includes(c) && !c.classList.contains('tabbar')) ;
+  // 탭 이후에 남을 요소(예: 마지막 요약 문장)는 패널 안에 이미 들어갔으므로 그대로 둔다.
+  wrap.appendChild(bar); wrap.appendChild(holder); tail.forEach(e => wrap.appendChild(e));
+}
+makeTabs('definition', { '왜 이렇게 정의했나': '정의 이유' }, '지표 5개');
+makeTabs('evidence', { '왜 지금인가': '왜 지금', '외국인 비중 그룹별': '그룹별 확률', '1순위 비교표': '비교표', '검증': '검증' });
+makeTabs('concept', { 'EXPERIENCE': '동선', 'MENU': '메뉴', 'DRIP': '핸드드립', 'GOODS': '원두·굿즈', 'NUMBERS': '손익', 'HISTORY GUIDE': '역사 톤', 'VALIDATION': '검증 계획' });
+</script>
+</body>
+</html>
